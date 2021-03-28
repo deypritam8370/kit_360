@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:kit_360/main.dart';
+import 'file:///C:/Users/deypr/AndroidStudioProjects/kit_360/lib/PAGES/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
