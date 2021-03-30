@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Login/login_screen.dart';
 // import 'package:flutter_auth/Screens/SignUp/components/background.dart';
-import 'package:kit_360/Screens/SignUp/components/or_divider.dart';
-import 'package:kit_360/Screens/SignUp/components/social_icon.dart';
+import 'file:///C:/Users/deypr/AndroidStudioProjects/kit_360/lib/Components/or_divider.dart';
+import 'file:///C:/Users/deypr/AndroidStudioProjects/kit_360/lib/Components/social_icon.dart';
 // import 'package:flutter_auth/Screens/Login/components/background.dart';
 //import 'package:kit_360/Screens/SignUp/signup_screen.dart';
 import 'package:kit_360/Components/already_have_an_account_check.dart';
