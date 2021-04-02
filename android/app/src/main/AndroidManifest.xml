@@ -2,7 +2,7 @@
     package="com.example.kit_360">
    <application
         android:label="kit_360"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/kit360logo">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

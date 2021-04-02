@@ -5,6 +5,7 @@ import 'package:kit_360/Screens/SignUp/signup_screen.dart';
 import 'package:kit_360/components/rounded_button.dart';
 import 'package:kit_360/constants.dart';
 // import 'package:flutter_svg/svg.dart';
+import 'package:kit_360/Screens/Dashboard/home_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -47,6 +48,19 @@ class Body extends StatelessWidget {
               MaterialPageRoute(
                 builder: (context) {
                   return SignUpScreen();
+                },
+              ),
+            );
+          },
+        ),
+        RoundedButton(
+          text: "DASHBOARD",
+          press: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return HomeScreen();
                 },
               ),
             );
