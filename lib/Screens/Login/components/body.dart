@@ -59,11 +59,11 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SocialIcon(
-              iconSrc: "assets/icons/google.svg",
+              iconSrc: "assets/icons/googleicon.png",
               press: () {},
             ),
             SocialIcon(
-              iconSrc: "assets/icons/google.svg",
+              iconSrc: "assets/icons/googleicon.png",
               press: () {},
             ),
           ],
