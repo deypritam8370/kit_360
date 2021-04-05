@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kit_360/Components/change_theme_button_widget.dart';
 
 class Items {
   String title;
@@ -9,38 +10,43 @@ class Items {
 }
 
 class Body extends StatelessWidget {
-
   Items item1 = new Items(
-      title: "Calendar",
-      subtitle: "March, Wednesday",
+      title: "UTILITY",
+      subtitle: "",
       event: "3 Events",
       img: "assets/calendar.png");
   Items item2 = new Items(
-    title: "Groceries",
-    subtitle: "Bocali, Apple",
+    title: "PRODUCTIVITY",
+    subtitle: "",
     event: "4 Items",
     img: "assets/food.png",
   );
   Items item3 = new Items(
-    title: "Locations",
-    subtitle: "Lucy Mao going to Office",
-    event: "",
+    title: "NEWS",
+    subtitle: "",
+    event: "5 Items",
     img: "assets/map.png",
   );
   Items item4 = new Items(
-    title: "Activity",
-    subtitle: "Rose favirited your Post",
+    title: "ENTERTAINMENT",
+    subtitle: "6 Items",
     event: "",
     img: "assets/festival.png",
   );
   Items item5 = new Items(
-    title: "To do",
-    subtitle: "Homework, Design",
+    title: "HEALTH & FITNESS",
+    subtitle: "",
     event: "4 Items",
     img: "assets/todo.png",
   );
   Items item6 = new Items(
-    title: "Settings",
+    title: "SOCIAL MEDIA",
+    subtitle: "",
+    event: "2 Items",
+    img: "assets/setting.png",
+  );
+  Items item7 = new Items(
+    title: "SHOPPING",
     subtitle: "",
     event: "2 Items",
     img: "assets/setting.png",
@@ -49,76 +55,61 @@ class Body extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
-//     return MaterialApp(
-//       title: 'Flutter Demo',
-//       theme: ThemeData(
-//         primarySwatch: Colors.red,
-//       ),
-//       home: MyHomePage(),
-//     );
-//   }
-// }
-//
-// class MyHomePage extends StatefulWidget {
-//   @override
-//   _MyHomePageState createState() => _MyHomePageState();
-// }
-//
-// class _MyHomePageState extends State<MyHomePage> {
-//   @override
-//   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Column(
-          children: <Widget>[
-            top(), //below search bar to end
-            SizedBox(
-              height: 20.0,
-            ),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text(
-                    "Category",
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0),
-                  ),
-                  Text(
-                    "View All",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14.0,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Container(
-              height: 200.0,
-              child: GridView(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  childAspectRatio: 3 / 2,
+        body: SafeArea(
+          child: Expanded(
+            child: Column(
+              children: <Widget>[
+                top(), //below search bar to end
+                SizedBox(
+                  height: 20.0,
                 ),
-                children: <Widget>[
-                  gridItem(Icons.airport_shuttle),
-                  gridItem(Icons.add_shopping_cart),
-                  gridItem(Icons.arrow_drop_down_circle),
-                  gridItem(Icons.bluetooth_searching),
-                  gridItem(Icons.add_location),
-                  gridItem(Icons.arrow_drop_down_circle),
-                ],
-              ),
+                Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        "Category",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 24.0),
+                      ),
+                      Text(
+                        "View All",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                // SizedBox(
+                //   height: 20.0,
+                // ),
+                // Container(
+                //   height: 200.0,
+                //   child: GridView(
+                //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                //       crossAxisCount: 3,
+                //       childAspectRatio: 3 / 2,
+                //     ),
+                //     children: <Widget>[
+                //       gridItem(Icons.airport_shuttle),
+                //       gridItem(Icons.add_shopping_cart),
+                //       gridItem(Icons.arrow_drop_down_circle),
+                //       gridItem(Icons.bluetooth_searching),
+                //       gridItem(Icons.add_location),
+                //       gridItem(Icons.arrow_drop_down_circle),
+                //     ],
+                //   ),
+                // ),
+                bottom(),
+              ],
             ),
-            bottom(),
-          ],
+          ),
         ),
       ),
     );
@@ -152,7 +143,7 @@ class Body extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-          color: Colors.deepOrange,
+          color: Colors.indigo,
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(30.0),
             bottomRight: Radius.circular(30.0),
@@ -173,10 +164,7 @@ class Body extends StatelessWidget {
                   ),
                   Text(
                     "Hi, Rithika",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24.0
-                    ),
+                    style: TextStyle(color: Colors.white, fontSize: 24.0),
                   ),
                 ],
               ),
@@ -213,19 +201,19 @@ class Body extends StatelessWidget {
   } //top
 
   bottom() {
-    List<Items> myList = [item1, item2, item3, item4, item5, item6];
+    List<Items> myList = [item1, item2, item3, item4, item5, item6, item7];
     var color = 0xff453658;
     return Expanded(
       child: GridView.count(
           childAspectRatio: 1.0,
           padding: EdgeInsets.only(left: 16, right: 16),
           crossAxisCount: 2,
-          crossAxisSpacing: 18,
-          mainAxisSpacing: 18,
+          crossAxisSpacing: 15,
+          mainAxisSpacing: 15,
           children: myList.map((data) {
             return Container(
               decoration: BoxDecoration(
-                  color: Color(color), borderRadius: BorderRadius.circular(10)),
+                  color: Color(color), borderRadius: BorderRadius.circular(20)),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -239,9 +227,9 @@ class Body extends StatelessWidget {
                   Text(
                     data.title,
                     style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600),
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
                     height: 8,
@@ -249,9 +237,9 @@ class Body extends StatelessWidget {
                   Text(
                     data.subtitle,
                     style: TextStyle(
-                            color: Colors.white38,
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600),
+                        color: Colors.white38,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
                     height: 14,
@@ -259,9 +247,9 @@ class Body extends StatelessWidget {
                   Text(
                     data.event,
                     style: TextStyle(
-                            color: Colors.white70,
-                            fontSize: 11,
-                            fontWeight: FontWeight.w600),
+                        color: Colors.white70,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w600),
                   ),
                 ],
               ),

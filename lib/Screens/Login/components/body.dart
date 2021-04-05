@@ -10,65 +10,69 @@ import 'package:kit_360/Components/social_icon.dart';
 import 'package:kit_360/Components/or_divider.dart';
 
 class Body extends StatelessWidget {
-  const Body({
-    Key key,
-  }) : super(key: key);
+  // const Body({
+  //   Key key,
+  // }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(
-          "LOGIN",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        SizedBox(height: size.height * 0.03),
-        // SvgPicture.asset(
-        //   "assets/icons/login.svg",
-        //   height: size.height * 0.35,
-        // ),
-        SizedBox(height: size.height * 0.03),
-        RoundedInputField(
-          hintText: "Your Email",
-          onChanged: (value) {},
-        ),
-        RoundedPasswordField(
-          onChanged: (value) {},
-        ),
-        RoundedButton(
-          text: "LOGIN",
-          press: () {},
-        ),
-        SizedBox(height: size.height * 0.03),
-        AlreadyHaveAnAccountCheck(
-          press: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return SignUpScreen();
-                },
-              ),
-            );
-          },
-        ),
-        OrDivider(),
-        Row(
+    return SafeArea(
+      child: Expanded(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SocialIcon(
-              iconSrc: "assets/icons/googleicon.png",
+            Text(
+              "LOGIN",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
+            ),
+            SizedBox(height: size.height * 0.05),
+            // SvgPicture.asset(
+            //   "assets/icons/login.svg",
+            //   height: size.height * 0.35,
+            // ),
+            SizedBox(height: size.height * 0.05),
+            RoundedInputField(
+              hintText: "Your Email",
+              onChanged: (value) {},
+            ),
+            RoundedPasswordField(
+              onChanged: (value) {},
+            ),
+            RoundedButton(
+              text: "LOGIN",
               press: () {},
             ),
-            SocialIcon(
-              iconSrc: "assets/icons/googleicon.png",
-              press: () {},
+            SizedBox(height: size.height * 0.03),
+            AlreadyHaveAnAccountCheck(
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
+                  ),
+                );
+              },
             ),
+            OrDivider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SocialIcon(
+                  iconSrc: "assets/icons/googleicon.png",
+                  press: () {},
+                ),
+                SocialIcon(
+                  iconSrc: "assets/icons/googleicon.png",
+                  press: () {},
+                ),
+              ],
+            )
           ],
-        )
-      ],
+        ),
+      ),
     );
   }
 }
