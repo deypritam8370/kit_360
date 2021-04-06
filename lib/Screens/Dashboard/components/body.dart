@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kit_360/Components/change_theme_button_widget.dart';
+import 'package:kit_360/Screens/Menu/components/body.dart';
 
 class Items {
   String title;
@@ -55,8 +56,7 @@ class Body extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         body: SafeArea(
           child: Expanded(
             child: Column(
@@ -111,7 +111,6 @@ class Body extends StatelessWidget {
             ),
           ),
         ),
-      ),
     );
   }
 
@@ -174,7 +173,9 @@ class Body extends StatelessWidget {
                   color: Colors.white,
                   size: 30.0,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  ///TODO - TRY TO ADD DRAWER HERE
+                },
               ),
             ],
           ),

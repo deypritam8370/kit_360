@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:kit_360/Screens/Dashboard/home_screen.dart';
+import 'package:kit_360/Screens/Menu/menu_screen.dart';
 import 'package:kit_360/constants.dart';
 import 'package:kit_360/Screens/Welcome/welcome_screen.dart';
 import 'package:kit_360/ThemeUI/theme_provider.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() => runApp(Kit360());
 
@@ -21,7 +21,7 @@ class Kit360 extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MyThemes.lightTheme,
       darkTheme: MyThemes.darkTheme,
-      home: WelcomeScreen(),
+      home: HomeScreen(),
     );
   }
 }
