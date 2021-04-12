@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Dashboard/home_screen.dart';
-import 'package:kit_360/Screens/Menu/menu_screen.dart';
-import 'package:kit_360/constants.dart';
-import 'package:kit_360/Screens/Welcome/welcome_screen.dart';
+//import 'package:kit_360/Screens/Menu/menu_screen.dart';
+//import 'package:kit_360/constants.dart';
+//import 'package:kit_360/Screens/Welcome/welcome_screen.dart';
 import 'package:kit_360/ThemeUI/theme_provider.dart';
-
+import 'package:kit_360/Screens/Splash/splash_page.dart';
 void main() => runApp(Kit360());
 
 class Kit360 extends StatelessWidget {
@@ -21,6 +21,7 @@ class Kit360 extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MyThemes.lightTheme,
       darkTheme: MyThemes.darkTheme,
+      //home: SplashPage(duration: 3, goToPage: HomeScreen()),
       home: HomeScreen(),
     );
   }

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-class SearchBarArea extends StatelessWidget {
+class SearchBarAreaSubCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.all(16.0),
       child: Column(
@@ -10,31 +11,19 @@ class SearchBarArea extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Row(
+              Column(
                 children: <Widget>[
-                  CircleAvatar(
-                    backgroundImage: AssetImage("dashboard/assets/img.jpg"),
-                    radius: 30.0,
-                  ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
                   Text(
                     "Hi, there",
-                    style: TextStyle(fontSize: 24.0),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
+                  ),
+                  SizedBox(height: size.height * 0.05),
+                  Text(
+                    "WELCOME",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
                   ),
                 ],
               ),
-              // IconButton(
-              //   icon: Icon(
-              //     Icons.notifications,
-              //     color: Colors.black38,
-              //     size: 30.0,
-              //   ),
-              //   onPressed: () {
-              //     ///TODO - TRY TO ADD DRAWER HERE
-              //   },
-              // ),
             ],
           ),
           SizedBox(
@@ -59,7 +48,6 @@ class SearchBarArea extends StatelessWidget {
     );
   }
 }
-
 
 // top() {
 //   return Container(
