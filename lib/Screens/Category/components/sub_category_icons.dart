@@ -39,7 +39,7 @@ class SubCategoryIcons extends StatelessWidget {
             height: 20.0,
           ),
           Container(
-            height: 300,
+            height: 350,
             child: GridView(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
@@ -62,4 +62,3 @@ class SubCategoryIcons extends StatelessWidget {
     );
   }
 }
-
