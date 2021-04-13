@@ -16,9 +16,16 @@ class CategoryArea extends StatefulWidget {
 class _CategoryAreaState extends State<CategoryArea> {
   @override
   Widget build(BuildContext context) {
+
     return Expanded(
       child: GridView(
         padding: EdgeInsets.only(left: 10, right: 10),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 15,
+          mainAxisSpacing: 15,
+          childAspectRatio: 1.0,
+        ),
         children: [
           GestureDetector(
             onTap: () {
@@ -357,12 +364,6 @@ class _CategoryAreaState extends State<CategoryArea> {
             ),
           ),
         ],
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 15,
-          mainAxisSpacing: 15,
-          childAspectRatio: 1.0,
-        ),
       ),
     );
   }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CategoryCards extends StatelessWidget {
 
-  Image img;
+  String img;
   String txt;
   Function press;
 
@@ -23,13 +23,13 @@ class CategoryCards extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // Image.asset(
-            //   data.img,
-            //   width: 42,
-            // ),
-            // SizedBox(
-            //   height: 14,
-            // ),
+            Image.asset(
+              img,
+              width: 42,
+            ),
+            SizedBox(
+              height: 14,
+            ),
             Text(
               txt,
               style: TextStyle(
