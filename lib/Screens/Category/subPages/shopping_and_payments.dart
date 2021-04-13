@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Category/components/search_bar_area_sub_category.dart';
+import 'package:kit_360/Screens/Category/components/sub_category_icons.dart';
+import 'package:kit_360/Screens/Menu/components/menubar.dart';
 
 class Shopping extends StatefulWidget {
   @override
@@ -18,6 +20,7 @@ class _ShoppingState extends State<Shopping> {
         child: Column(
           children: <Widget>[
             SearchBarAreaSubCategory(),
+            SubCategoryIcons(),
           ],
         ),
       ),
