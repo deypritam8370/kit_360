@@ -26,6 +26,7 @@ class MenuBar extends StatelessWidget {
             //           'https://oflutter.com/wp-content/uploads/2021/02/profile-bg3.jpg')),
             // ),
           ),
+          Divider(thickness: 2),
           ListTile(
             leading: Icon(Icons.favorite),
             title: Text('FAVOURITES'),
@@ -40,7 +41,7 @@ class MenuBar extends StatelessWidget {
             leading: Icon(Icons.notifications),
             title: Text('NOTIFICATIONS'),
           ),
-          Divider(),
+          Divider(thickness: 2),
           ListTile(
             leading: Icon(Icons.home),
             title: Text('ALL OUR APPS'),
@@ -61,7 +62,7 @@ class MenuBar extends StatelessWidget {
             title: Text('Feedback'),
             onTap: () => null,
           ),
-          Divider(),
+          Divider(thickness: 2),
           ListTile(
             title: Text('Exit'),
             leading: Icon(Icons.exit_to_app),
