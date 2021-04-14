@@ -5,62 +5,59 @@ class MenuBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        // Remove padding
-        padding: EdgeInsets.zero,
         children: [
+          SizedBox(
+            height: 10,
+          ),
           UserAccountsDrawerHeader(
-            accountName: Text('360 KIT'),
-            accountEmail: Text('kit360@gmail.com'),
-            currentAccountPicture: CircleAvatar(
-              child: ClipOval(
-                child: Image.network(
-                  'https://oflutter.com/wp-content/uploads/2021/02/girl-profile.png',
-                  fit: BoxFit.cover,
-                  width: 90,
-                  height: 90,
-                ),
-              ),
+            accountName: Text(
+              'KIT 360',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800),
             ),
-            decoration: BoxDecoration(
-              //color: Colors.blue,
-              image: DecorationImage(
-                  fit: BoxFit.fill,
-                  image: NetworkImage(
-                      'https://oflutter.com/wp-content/uploads/2021/02/profile-bg3.jpg')),
+            accountEmail: null,
+            currentAccountPicture: Image.asset(
+              'assets/images/social-media.png',
             ),
+            // decoration: BoxDecoration(
+            //   //color: Colors.blue,
+            //   image: DecorationImage(
+            //       fit: BoxFit.fill,
+            //       image: NetworkImage(
+            //           'https://oflutter.com/wp-content/uploads/2021/02/profile-bg3.jpg')),
+            // ),
           ),
           ListTile(
             leading: Icon(Icons.favorite),
-            title: Text('Favorites'),
+            title: Text('FAVOURITES'),
             onTap: () => null,
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Our Other Apps'),
-            onTap: () => null,
-          ),
-          ListTile(
-            leading: Icon(Icons.share),
-            title: Text('Share'),
+            leading: Icon(Icons.settings),
+            title: Text('SETTINGS'),
             onTap: () => null,
           ),
           ListTile(
             leading: Icon(Icons.notifications),
-            title: Text('Settings'),
+            title: Text('NOTIFICATIONS'),
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('About Us'),
+            leading: Icon(Icons.home),
+            title: Text('ALL OUR APPS'),
             onTap: () => null,
           ),
           ListTile(
-            leading: Icon(Icons.description),
-            title: Text('Rate Us'),
+            leading: Icon(Icons.rate_review),
+            title: Text('RATE US'),
             onTap: () => null,
           ),
           ListTile(
-            leading: Icon(Icons.description),
+            leading: Icon(Icons.share),
+            title: Text('SHARE'),
+            onTap: () => null,
+          ),
+          ListTile(
+            leading: Icon(Icons.feedback),
             title: Text('Feedback'),
             onTap: () => null,
           ),
