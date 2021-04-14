@@ -12,10 +12,10 @@ class _NewsState extends State<News> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // drawer: MenuBar(),
-      // appBar: AppBar(
-      //   title: Text("360 KIT"),
-      // ),
+      drawer: MenuBar(),
+      appBar: AppBar(
+        title: Text("360 KIT"),
+      ),
       body: SafeArea(
         child: Column(
           children: <Widget>[

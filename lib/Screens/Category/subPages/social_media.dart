@@ -13,10 +13,10 @@ class _SocialMediaState extends State<SocialMedia> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      // drawer: MenuBar(),
-      // appBar: AppBar(
-      //   title: Text("360 KIT"),
-      // ),
+      drawer: MenuBar(),
+      appBar: AppBar(
+        title: Text("360 KIT"),
+      ),
       body: SafeArea(
         child: Column(
           children: <Widget>[

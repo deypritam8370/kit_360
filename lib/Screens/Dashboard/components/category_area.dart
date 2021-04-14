@@ -48,12 +48,13 @@ class _CategoryAreaState extends State<CategoryArea> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  // Image.asset(
-                  //   data.img,
-                  //   width: 42,
-                  // ),
+                  Image.asset(
+                    'assets/images/social-media.png',
+                    width: 80,
+                    height: 80,
+                  ),
                   SizedBox(
-                    height: 14,
+                    height: 16,
                   ),
                   Text(
                     "UTILITY",
@@ -90,12 +91,13 @@ class _CategoryAreaState extends State<CategoryArea> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  // Image.asset(
-                  //   data.img,
-                  //   width: 42,
-                  // ),
+                  Image.asset(
+                    'assets/images/social-media.png',
+                    width: 80,
+                    height: 80,
+                  ),
                   SizedBox(
-                    height: 14,
+                    height: 16,
                   ),
                   Text(
                     "PRODUCTIVITY",
@@ -132,12 +134,13 @@ class _CategoryAreaState extends State<CategoryArea> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  // Image.asset(
-                  //   data.img,
-                  //   width: 42,
-                  // ),
+                  Image.asset(
+                    'assets/images/social-media.png',
+                    width: 80,
+                    height: 80,
+                  ),
                   SizedBox(
-                    height: 14,
+                    height: 16,
                   ),
                   Text(
                     "SOCIAL MEDIA",
@@ -174,12 +177,13 @@ class _CategoryAreaState extends State<CategoryArea> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  // Image.asset(
-                  //   data.img,
-                  //   width: 42,
-                  // ),
+                  Image.asset(
+                    'assets/images/social-media.png',
+                    width: 80,
+                    height: 80,
+                  ),
                   SizedBox(
-                    height: 14,
+                    height: 16,
                   ),
                   Text(
                     "ENTERTAINMENT",
@@ -216,12 +220,13 @@ class _CategoryAreaState extends State<CategoryArea> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  // Image.asset(
-                  //   data.img,
-                  //   width: 42,
-                  // ),
+                  Image.asset(
+                    'assets/images/social-media.png',
+                    width: 80,
+                    height: 80,
+                  ),
                   SizedBox(
-                    height: 14,
+                    height: 16,
                   ),
                   Text(
                     "SHOPPING AND PAYMENTS",
@@ -258,12 +263,13 @@ class _CategoryAreaState extends State<CategoryArea> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  // Image.asset(
-                  //   data.img,
-                  //   width: 42,
-                  // ),
+                  Image.asset(
+                    'assets/images/social-media.png',
+                    width: 80,
+                    height: 80,
+                  ),
                   SizedBox(
-                    height: 14,
+                    height: 16,
                   ),
                   Text(
                     "HEALTH AND FITNESS",
@@ -300,12 +306,13 @@ class _CategoryAreaState extends State<CategoryArea> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  // Image.asset(
-                  //   data.img,
-                  //   width: 42,
-                  // ),
+                  Image.asset(
+                    'assets/images/social-media.png',
+                    width: 80,
+                    height: 80,
+                  ),
                   SizedBox(
-                    height: 14,
+                    height: 16,
                   ),
                   Text(
                     "NEWS",
@@ -342,12 +349,13 @@ class _CategoryAreaState extends State<CategoryArea> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  // Image.asset(
-                  //   data.img,
-                  //   width: 42,
-                  // ),
+                  Image.asset(
+                    'assets/images/social-media.png',
+                    width: 80,
+                    height: 80,
+                  ),
                   SizedBox(
-                    height: 14,
+                    height: 16,
                   ),
                   Text(
                     "EDUCATION",
