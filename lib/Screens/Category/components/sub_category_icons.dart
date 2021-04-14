@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
 
-gridItem(icon, txt) {
+gridItem(img, txt) {
   return Column(
     children: <Widget>[
       CircleAvatar(
-        radius: 30,
-        child: Icon(
-          icon,
-          size: 30.0,
-          color: Colors.white,
-        ),
-        backgroundColor: Colors.black12.withOpacity(0.9),
+        radius: 35,
+        child: Image.asset(img),
       ),
       SizedBox(
         height: 10.0,
@@ -27,7 +22,7 @@ gridItem(icon, txt) {
 
 class SubCategoryIcons extends StatelessWidget {
 
-  IconData icon;
+  Image img;
   String txt;
 
   @override
@@ -36,7 +31,7 @@ class SubCategoryIcons extends StatelessWidget {
       child: Column(
         children: <Widget>[
           SizedBox(
-            height: 20.0,
+            height: 10.0,
           ),
           Container(
             height: 300,
@@ -46,14 +41,18 @@ class SubCategoryIcons extends StatelessWidget {
                 childAspectRatio: 1,
               ),
               children: <Widget>[
-                gridItem(Icons.airport_shuttle, "Happy"),
-                gridItem(Icons.airport_shuttle, "Happy"),
-                gridItem(Icons.airport_shuttle, "Happy"),
-                gridItem(Icons.airport_shuttle, "Happy"),
-                gridItem(Icons.airport_shuttle, "Happy"),
-                gridItem(Icons.airport_shuttle, "Happy"),
-                gridItem(Icons.airport_shuttle, "Happy"),
-                gridItem(Icons.airport_shuttle, "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
+                gridItem('assets/images/facebook.png', "Happy"),
               ],
             ),
           ),
