@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Category/subPages/education.dart';
 import 'package:kit_360/Screens/Category/subPages/entertainment.dart';
@@ -58,6 +59,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                   ),
                   Text(
                     "UTILITY",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                         //color: Colors.white,
                         fontSize: 18,
@@ -101,6 +103,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                   ),
                   Text(
                     "PRODUCTIVITY",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       //color: Colors.white,
                         fontSize: 18,
@@ -144,6 +147,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                   ),
                   Text(
                     "SOCIAL MEDIA",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       //color: Colors.white,
                         fontSize: 18,
@@ -187,6 +191,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                   ),
                   Text(
                     "ENTERTAINMENT",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       //color: Colors.white,
                         fontSize: 18,
@@ -230,6 +235,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                   ),
                   Text(
                     "SHOPPING AND PAYMENTS",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       //color: Colors.white,
                         fontSize: 18,
@@ -273,6 +279,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                   ),
                   Text(
                     "HEALTH AND FITNESS",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       //color: Colors.white,
                         fontSize: 18,
@@ -307,7 +314,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'assets/images/social-media.png',
+                    'assets/images/news.png',
                     width: 80,
                     height: 80,
                   ),
@@ -316,6 +323,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                   ),
                   Text(
                     "NEWS",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       //color: Colors.white,
                         fontSize: 18,
@@ -350,7 +358,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'assets/images/social-media.png',
+                    'assets/images/education.png',
                     width: 80,
                     height: 80,
                   ),
@@ -359,6 +367,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                   ),
                   Text(
                     "EDUCATION",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       //color: Colors.white,
                         fontSize: 18,
