@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Category/components/search_bar_area_sub_category.dart';
 import 'package:kit_360/Screens/Category/components/sub_category_icons.dart';
-import 'package:kit_360/Screens/Menu/components/menubar.dart';
+import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
 
 class Entertainment extends StatefulWidget {
   @override

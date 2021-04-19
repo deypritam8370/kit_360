@@ -21,16 +21,16 @@ class SearchBarAreaDashboard extends StatelessWidget {
                   ),
                 ],
               ),
-              IconButton(
-                icon: Icon(
-                  Icons.notifications,
-                  color: Colors.black,
-                  size: 30.0,
-                ),
-                onPressed: () {
-                  ///TODO - TRY TO ADD DRAWER HERE
-                },
-              ),
+              // IconButton(
+              //   icon: Icon(
+              //     Icons.notifications,
+              //     color: Colors.black,
+              //     size: 30.0,
+              //   ),
+              //   onPressed: () {
+              //     ///TODO - TRY TO ADD DRAWER HERE
+              //   },
+              // ),
             ],
           ),
           SizedBox(

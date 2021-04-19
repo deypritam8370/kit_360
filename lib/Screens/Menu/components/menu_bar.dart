@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
 
-class MenuBar extends StatelessWidget {
+class MenuBar extends StatefulWidget {
+  @override
+  _MenuBarState createState() => _MenuBarState();
+}
+
+class _MenuBarState extends State<MenuBar> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -12,11 +18,11 @@ class MenuBar extends StatelessWidget {
           UserAccountsDrawerHeader(
             accountName: Text(
               'KIT 360',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800),
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.w800),
             ),
             accountEmail: null,
             currentAccountPicture: Image.asset(
-              'assets/images/social-media.png',
+              'assets/images/kit360logo.png',
             ),
             // decoration: BoxDecoration(
             //   //color: Colors.blue,
@@ -26,6 +32,16 @@ class MenuBar extends StatelessWidget {
             //           'https://oflutter.com/wp-content/uploads/2021/02/profile-bg3.jpg')),
             // ),
           ),
+          //Divider(thickness: 2),
+          // ListTile(
+          //   title: Text('THEME'),
+          //   trailing: Switch(
+          //     value: false,
+          //     onChanged: (changedTheme) {
+          //       ChangeThemeButtonWidget();
+          //     },
+          //   ),
+          // ),
           Divider(thickness: 2),
           ListTile(
             leading: Icon(Icons.favorite),
@@ -40,6 +56,7 @@ class MenuBar extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.notifications),
             title: Text('NOTIFICATIONS'),
+            onTap: () => null,
           ),
           Divider(thickness: 2),
           ListTile(
