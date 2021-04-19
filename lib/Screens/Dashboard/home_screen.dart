@@ -2,19 +2,43 @@ import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
 import 'package:kit_360/Screens/Dashboard/components/search_bar_area_dashboard.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
+import 'package:kit_360/SearchBar/SearchScreen.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       drawer: MenuBar(),
       appBar: AppBar(
         title: Text("360 KIT"),
-        actions: [
-          ChangeThemeButtonWidget(),
+        actions: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(right: 20.0),
+            child: ChangeThemeButtonWidget(),
+          ),
+          Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          duration: const Duration(milliseconds: 500),
+                          alignment: Alignment.topRight,
+                          type: PageTransitionType.scale,
+                          child: SearchScreen(countryModelListGlobal)));
+                },
+                child: Icon(
+                  Icons.search,
+                  size: 26.0,
+                ),
+              )),
         ],
+        actionsIconTheme:
+            IconThemeData(size: 26.0, color: Colors.grey, opacity: 10.0),
       ),
       body: SafeArea(
         child: Column(
@@ -29,9 +53,16 @@ class HomeScreen extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "CATEGORY",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 24.0),
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0),
                   ),
+                  // Text(
+                  //   "View All",
+                  //   style: TextStyle(
+                  //     fontWeight: FontWeight.bold,
+                  //     fontSize: 14.0,
+                  //   ),
+                  // ),
                 ],
               ),
             ),

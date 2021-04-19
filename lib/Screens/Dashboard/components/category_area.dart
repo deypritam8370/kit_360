@@ -8,6 +8,20 @@ import 'package:kit_360/Screens/Category/subPages/productivity.dart';
 import 'package:kit_360/Screens/Category/subPages/shopping_and_payments.dart';
 import 'package:kit_360/Screens/Category/subPages/social_media.dart';
 import 'package:kit_360/Screens/Category/subPages/utility.dart';
+import 'package:kit_360/SearchBar/next_screen.dart';
+import 'package:kit_360/SearchBar/Constants.dart';
+
+class CountryModel {
+  String countryName;
+  String countryCode;
+  Widget tap;
+  @override
+  String toString() {
+    return '$countryName $countryCode';
+  }
+
+  CountryModel(this.countryName, this.countryCode, this.tap);
+}
 
 class CategoryArea extends StatefulWidget {
   @override
@@ -15,9 +29,24 @@ class CategoryArea extends StatefulWidget {
 }
 
 class _CategoryAreaState extends State<CategoryArea> {
+  List<CountryModel> countryModelList = <CountryModel>[
+    CountryModel('Facebook', 'facebook', NextScreen()),
+    CountryModel('Social Media', 'social-media', NextScreen()),
+    //CountryModel('Camera', 'camera.png', NextScreen()),
+    // CountryModel('Linkedin', 'linkedin.png', NextScreen()),
+    // CountryModel('Quora', 'quora.png', NextScreen()),
+    // CountryModel('Youtube', 'youtube.png', NextScreen())
+  ];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    countryModelListGlobal = countryModelList;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-
     return Expanded(
       child: GridView(
         padding: EdgeInsets.only(left: 10, right: 10),
@@ -105,7 +134,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     "PRODUCTIVITY",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      //color: Colors.white,
+                        //color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.w600),
                   ),
@@ -149,7 +178,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     "SOCIAL MEDIA",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      //color: Colors.white,
+                        //color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.w600),
                   ),
@@ -193,7 +222,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     "ENTERTAINMENT",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      //color: Colors.white,
+                        //color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.w600),
                   ),
@@ -237,7 +266,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     "SHOPPING AND PAYMENTS",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      //color: Colors.white,
+                        //color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.w600),
                   ),
@@ -281,7 +310,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     "HEALTH AND FITNESS",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      //color: Colors.white,
+                        //color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.w600),
                   ),
@@ -325,7 +354,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     "NEWS",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      //color: Colors.white,
+                        //color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.w600),
                   ),
@@ -369,7 +398,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     "EDUCATION",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      //color: Colors.white,
+                        //color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.w600),
                   ),

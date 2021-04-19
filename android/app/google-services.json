@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "1045224612413",
-    "project_id": "kit360auth",
-    "storage_bucket": "kit360auth.appspot.com"
+    "project_number": "116941635707",
+    "project_id": "kit360-8491f",
+    "storage_bucket": "kit360-8491f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1045224612413:android:c3b1d8c381734109ac0054",
+        "mobilesdk_app_id": "1:116941635707:android:7e6e253ac3b540e88ce2de",
         "android_client_info": {
           "package_name": "com.example.kit_360"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1045224612413-jvgdagi1d1d2963hu68jhp379gflehvn.apps.googleusercontent.com",
+          "client_id": "116941635707-l3iftnfm3vftpsdehaiblma0m64090ku.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC0FHsVB0hmF2RXpcNwW9fNsgkkEGY2UeA"
+          "current_key": "AIzaSyDcuhAd6wsUTgn3jVXLDuXfP5yBsOzhhrw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1045224612413-jvgdagi1d1d2963hu68jhp379gflehvn.apps.googleusercontent.com",
+              "client_id": "116941635707-l3iftnfm3vftpsdehaiblma0m64090ku.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "116941635707-cjga1g1r56ctkghdi4kk24mkghaoeo3r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.kit360"
+              }
             }
           ]
         }
