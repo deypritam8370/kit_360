@@ -79,7 +79,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'assets/images/social-media.png',
+                    'assets/images/utility.png',
                     width: 80,
                     height: 80,
                   ),
@@ -123,7 +123,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'assets/images/social-media.png',
+                    'assets/images/productivity.png',
                     width: 80,
                     height: 80,
                   ),
@@ -167,7 +167,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'assets/images/social-media.png',
+                    'assets/images/social_media.png',
                     width: 80,
                     height: 80,
                   ),
@@ -211,7 +211,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'assets/images/social-media.png',
+                    'assets/images/entertainment.png',
                     width: 80,
                     height: 80,
                   ),
@@ -255,7 +255,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'assets/images/social-media.png',
+                    'assets/images/shopping.png',
                     width: 80,
                     height: 80,
                   ),
@@ -299,7 +299,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'assets/images/social-media.png',
+                    'assets/images/health_and_fitness.png',
                     width: 80,
                     height: 80,
                   ),
