@@ -30,12 +30,12 @@ class CategoryArea extends StatefulWidget {
 
 class _CategoryAreaState extends State<CategoryArea> {
   List<CountryModel> countryModelList = <CountryModel>[
-    CountryModel('Facebook', 'facebook', NextScreen()),
-    CountryModel('Social Media', 'social-media', NextScreen()),
+    //CountryModel('Facebook', 'facebook', NextScreen()),
+    //CountryModel('Social Media', 'social-media', NextScreen()),
     //CountryModel('Camera', 'camera.png', NextScreen()),
-    // CountryModel('Linkedin', 'linkedin.png', NextScreen()),
-    // CountryModel('Quora', 'quora.png', NextScreen()),
-    // CountryModel('Youtube', 'youtube.png', NextScreen())
+    CountryModel('Linkedin', 'social media_linkedin', NextScreen()),
+    CountryModel('Quora', 'social media_quora', NextScreen()),
+    CountryModel('Youtube', 'social media_youtube', NextScreen())
   ];
 
   @override
