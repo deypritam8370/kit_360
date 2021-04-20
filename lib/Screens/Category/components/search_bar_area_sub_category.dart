@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class SearchBarAreaSubCategory extends StatelessWidget {
-
   SearchBarAreaSubCategory(this.txt);
   String txt;
 
@@ -14,7 +13,12 @@ class SearchBarAreaSubCategory extends StatelessWidget {
         children: <Widget>[
           Column(
             children: <Widget>[
-              SizedBox(height: size.height * 0.15),
+              Image.asset(
+                'assets/images/social_media.png',
+                alignment: Alignment.center,
+                height: size.height * 0.15,
+              ),
+              SizedBox(height: size.height * 0.05),
               Text(
                 txt,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35.0),
@@ -23,9 +27,9 @@ class SearchBarAreaSubCategory extends StatelessWidget {
               SizedBox(height: size.height * 0.05),
             ],
           ),
-          SizedBox(
-            height: 20.0,
-          ),
+          // SizedBox(
+          //   height: 20.0,
+          // ),
           TextField(
             decoration: InputDecoration(
               hintText: "Search for Apps",
@@ -37,7 +41,7 @@ class SearchBarAreaSubCategory extends StatelessWidget {
                 borderSide: BorderSide(color: Colors.grey[300], width: 1),
               ),
               contentPadding:
-              EdgeInsets.symmetric(horizontal: 18.0, vertical: 18.0),
+                  EdgeInsets.symmetric(horizontal: 18.0, vertical: 18.0),
             ),
           )
         ],
