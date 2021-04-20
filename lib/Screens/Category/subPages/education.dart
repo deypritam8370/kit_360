@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Category/components/search_bar_area_sub_category.dart';
-import 'package:kit_360/Screens/Category/components/sub_category_icons.dart';
+import 'package:kit_360/Screens/Category/components/sub_category_area.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
 
 class Education extends StatefulWidget {
@@ -20,8 +20,8 @@ class _EducationState extends State<Education> {
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            SearchBarAreaSubCategory(),
-            SubCategoryIcons(),
+            SearchBarAreaSubCategory('EDUCATION'),
+            SubCategoryArea(),
           ],
         ),
       ),

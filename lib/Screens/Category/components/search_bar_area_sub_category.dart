@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SearchBarAreaSubCategory extends StatelessWidget {
+
+  SearchBarAreaSubCategory(this.txt);
+  String txt;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -12,7 +16,7 @@ class SearchBarAreaSubCategory extends StatelessWidget {
             children: <Widget>[
               SizedBox(height: size.height * 0.15),
               Text(
-                "SOCIAL MEDIA",
+                txt,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35.0),
                 textAlign: TextAlign.center,
               ),
