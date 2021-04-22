@@ -20,9 +20,9 @@ class _SearchScreenState extends State<SearchScreen> {
   //   CountryModel2('Alarm', 'alarm.png', NextScreen()),
   //   CountryModel2('Calculator', 'calculator.png', NextScreen()),
   //   CountryModel2('Camera', 'camera.png', NextScreen()),
-  //   CountryModel2('Linkedin', 'social media_linkedin.png', NextScreen()),
-  //   CountryModel2('Quora', 'social media_quora.png', NextScreen()),
-  //   CountryModel2('Youtube', 'social media_youtube.png', NextScreen())
+  //   CountryModel2('Linkedin', 'linkedin.png', NextScreen()),
+  //   CountryModel2('Quora', 'quora.png', NextScreen()),
+  //   CountryModel2('Youtube', 'youtube.png', NextScreen())
   // ];
 
   @override
@@ -52,9 +52,9 @@ class _SearchScreenState extends State<SearchScreen> {
       searchBarPadding: EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 5),
       headerPadding: EdgeInsets.only(left: 0, right: 0),
       listPadding: EdgeInsets.only(left: 0, right: 0),
-      hintText: "Search Placeholder",
+      hintText: "Search For Apps",
       hintStyle: TextStyle(
-        color: Colors.black54,
+        color: Colors.white,
       ),
       textStyle: TextStyle(
         color: Colors.black,
@@ -65,7 +65,7 @@ class _SearchScreenState extends State<SearchScreen> {
       mainAxisSpacing: 5,
       crossAxisSpacing: 5,
       suggestions: widget.countryModelList,
-      cancellationWidget: Text("Cancel"),
+      cancellationWidget: Text("Close"),
       minimumChars: 1,
 //      placeHolder: Center(
 //        child: Padding(
@@ -76,7 +76,7 @@ class _SearchScreenState extends State<SearchScreen> {
       emptyWidget: Center(
         child: Padding(
           padding: const EdgeInsets.only(left: 10, right: 10),
-          child: Text("There is no any data found"),
+          child: Text("NO APPS FOUND"),
         ),
       ),
       onError: (error) {

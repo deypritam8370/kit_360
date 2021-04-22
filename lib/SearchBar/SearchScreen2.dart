@@ -31,7 +31,7 @@ class _SearchScreenState extends State<SearchScreen2> {
     CountryModel2('Calculator', 'calculator.png', NextScreen()),
     CountryModel2('Camera', 'camera.png', NextScreen()),
     //CountryModel2('Linkedin', 'linkedin.png', NextScreen()),
-    CountryModel2('Quora', 'social media_quora.png', NextScreen()),
+    CountryModel2('Quora', 'quora.png', NextScreen()),
     //CountryModel2('Youtube', 'youtube.png', NextScreen())
   ];
 

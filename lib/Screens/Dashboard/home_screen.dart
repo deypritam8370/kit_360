@@ -20,22 +20,25 @@ class HomeScreen extends StatelessWidget {
             child: ChangeThemeButtonWidget(),
           ),
           Padding(
-              padding: EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      PageTransition(
-                          duration: const Duration(milliseconds: 500),
-                          alignment: Alignment.topRight,
-                          type: PageTransitionType.scale,
-                          child: SearchScreen(countryModelListGlobal)));
-                },
-                child: Icon(
-                  Icons.search,
-                  size: 26.0,
-                ),
-              )),
+            padding: EdgeInsets.only(right: 20.0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    duration: const Duration(milliseconds: 500),
+                    alignment: Alignment.topRight,
+                    type: PageTransitionType.scale,
+                    child: SearchScreen(countryModelListGlobal),
+                  ),
+                );
+              },
+              child: Icon(
+                Icons.search,
+                size: 26.0,
+              ),
+            ),
+          ),
         ],
         actionsIconTheme:
             IconThemeData(size: 26.0, color: Colors.grey, opacity: 10.0),

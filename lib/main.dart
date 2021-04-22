@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Dashboard/home_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:kit_360/ThemeUI/theme_provider.dart';
-//import 'package:kit_360/Screens/Splash/splash_page.dart';
 
 void main() => runApp(Kit360());
 

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SearchBarAreaSubCategory extends StatelessWidget {
+
   SearchBarAreaSubCategory(this.txt);
+
   String txt;
 
   @override
@@ -18,18 +20,18 @@ class SearchBarAreaSubCategory extends StatelessWidget {
                 alignment: Alignment.center,
                 height: size.height * 0.15,
               ),
-              SizedBox(height: size.height * 0.05),
+              SizedBox(height: size.height * 0.02),
               Text(
                 txt,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35.0),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 35.0,
+                ),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: size.height * 0.05),
             ],
           ),
-          // SizedBox(
-          //   height: 20.0,
-          // ),
           TextField(
             decoration: InputDecoration(
               hintText: "Search for Apps",

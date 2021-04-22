@@ -11,12 +11,9 @@ class _SubCategoryAreaState extends State<SubCategoryArea> {
   Widget build(BuildContext context) {
     return Expanded(
       child: GridView(
-        //padding: EdgeInsets.only(left: 10, right: 10),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
-          //crossAxisSpacing: 15,
-          //mainAxisSpacing: 15,
-          childAspectRatio: 1.0,
+          childAspectRatio: 0.9,
         ),
         children: [
           GestureDetector(
