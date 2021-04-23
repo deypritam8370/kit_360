@@ -215,32 +215,30 @@ class _SocialMediaState extends State<SocialMedia> {
                         ),
                       );
                     },
-                    child: ClipOval(
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset(
-                              'assets/social_media/quora.png',
-                              width: 80,
-                              height: 80,
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Text(
-                              "UTILITY",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                //color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                          ],
-                        ),
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/quora.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "UTILITY",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -253,32 +251,30 @@ class _SocialMediaState extends State<SocialMedia> {
                         ),
                       );
                     },
-                    child: ClipOval(
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset(
-                              'assets/social_media/youtube.png',
-                              width: 80,
-                              height: 80,
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Text(
-                              "UTILITY",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                //color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                          ],
-                        ),
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/youtube.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "UTILITY",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -291,32 +287,30 @@ class _SocialMediaState extends State<SocialMedia> {
                         ),
                       );
                     },
-                    child: ClipOval(
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset(
-                              'assets/social_media/linkedin.png',
-                              width: 80,
-                              height: 80,
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Text(
-                              "UTILITY",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                //color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                          ],
-                        ),
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/linkedin.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "UTILITY",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -329,32 +323,30 @@ class _SocialMediaState extends State<SocialMedia> {
                         ),
                       );
                     },
-                    child: ClipOval(
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset(
-                              'assets/social_media/discord.png',
-                              width: 80,
-                              height: 80,
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Text(
-                              "Discord",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                //color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                          ],
-                        ),
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/discord.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Discord",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -367,32 +359,282 @@ class _SocialMediaState extends State<SocialMedia> {
                         ),
                       );
                     },
-                    child: ClipOval(
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset(
-                              'assets/social_media/twitch.png',
-                              width: 80,
-                              height: 80,
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Text(
-                              "Twitch",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                //color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                          ],
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/twitch.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Twitch",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FacebookWeb(),
                         ),
+                      );
+                    },
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/blogger.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Blogger",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FacebookWeb(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/github.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Github",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FacebookWeb(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/messenger.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Messenger",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FacebookWeb(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/pinterest.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Pinterest",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FacebookWeb(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/reddit.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Reddit",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FacebookWeb(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/snapchat.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Snapchat",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FacebookWeb(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/yahoo.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Yahoo",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
                       ),
                     ),
                   ),
