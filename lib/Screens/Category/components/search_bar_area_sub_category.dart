@@ -16,7 +16,7 @@ class SearchBarAreaSubCategory extends StatelessWidget {
           Column(
             children: <Widget>[
               Image.asset(
-                'assets/images/social_media.png',
+                'assets/social_media/social_media.png',
                 alignment: Alignment.center,
                 height: size.height * 0.15,
               ),

@@ -66,32 +66,30 @@ class _SocialMediaState extends State<SocialMedia> {
                         ),
                       );
                     },
-                    child: ClipOval(
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset(
-                              'assets/images/facebook.png',
-                              width: 80,
-                              height: 80,
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Text(
-                              "Facebook",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  //color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                          ],
-                        ),
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/facebook.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Facebook",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -104,32 +102,66 @@ class _SocialMediaState extends State<SocialMedia> {
                         ),
                       );
                     },
-                    child: ClipOval(
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset(
-                              'assets/images/pinterest.png',
-                              width: 80,
-                              height: 80,
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Text(
-                              "Pinterest",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                //color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                          ],
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/instagram.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Instagram",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Utility(),
                         ),
+                      );
+                    },
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/twitter.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Twitter",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -148,7 +180,7 @@ class _SocialMediaState extends State<SocialMedia> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/twitter.png',
+                              'assets/social_media/quora.png',
                               width: 80,
                               height: 80,
                             ),
@@ -186,7 +218,7 @@ class _SocialMediaState extends State<SocialMedia> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/quora.png',
+                              'assets/social_media/youtube.png',
                               width: 80,
                               height: 80,
                             ),
@@ -224,7 +256,7 @@ class _SocialMediaState extends State<SocialMedia> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/youtube.png',
+                              'assets/social_media/linkedin.png',
                               width: 80,
                               height: 80,
                             ),
@@ -262,7 +294,7 @@ class _SocialMediaState extends State<SocialMedia> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/linkedin.png',
+                              'assets/social_media/discord.png',
                               width: 80,
                               height: 80,
                             ),
@@ -270,7 +302,7 @@ class _SocialMediaState extends State<SocialMedia> {
                               height: 16,
                             ),
                             Text(
-                              "UTILITY",
+                              "Discord",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 //color: Colors.white,
@@ -300,7 +332,7 @@ class _SocialMediaState extends State<SocialMedia> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/utility.png',
+                              'assets/social_media/twitch.png',
                               width: 80,
                               height: 80,
                             ),
@@ -308,45 +340,7 @@ class _SocialMediaState extends State<SocialMedia> {
                               height: 16,
                             ),
                             Text(
-                              "UTILITY",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                //color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Utility(),
-                        ),
-                      );
-                    },
-                    child: ClipOval(
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset(
-                              'assets/images/utility.png',
-                              width: 80,
-                              height: 80,
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Text(
-                              "UTILITY",
+                              "Twitch",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 //color: Colors.white,

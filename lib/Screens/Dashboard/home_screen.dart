@@ -59,13 +59,6 @@ class HomeScreen extends StatelessWidget {
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0),
                   ),
-                  // Text(
-                  //   "View All",
-                  //   style: TextStyle(
-                  //     fontWeight: FontWeight.bold,
-                  //     fontSize: 14.0,
-                  //   ),
-                  // ),
                 ],
               ),
             ),
