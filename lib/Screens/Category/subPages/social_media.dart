@@ -16,6 +16,7 @@ class SocialMedia extends StatefulWidget {
 class _SocialMediaState extends State<SocialMedia> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       drawer: MenuBar(),
       appBar: AppBar(
@@ -49,7 +50,47 @@ class _SocialMediaState extends State<SocialMedia> {
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            SearchBarAreaSubCategory('SOCIAL MEDIA'),
+            Container(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                children: <Widget>[
+                  Column(
+                    children: <Widget>[
+                      Image.asset(
+                        'assets/social_media/social_media.png',
+                        alignment: Alignment.center,
+                        height: size.height * 0.15,
+                      ),
+                      SizedBox(height: size.height * 0.02),
+                      Text(
+                        'SOCIAL MEDIA',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 35.0,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: size.height * 0.05),
+                    ],
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: "Search for Apps",
+                      filled: true,
+                      prefixIcon: Icon(Icons.search),
+                      suffixIcon: Icon(Icons.filter_list),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(24.0),
+                        borderSide:
+                        BorderSide(color: Colors.grey[300], width: 1),
+                      ),
+                      contentPadding: EdgeInsets.symmetric(
+                          horizontal: 18.0, vertical: 18.0),
+                    ),
+                  )
+                ],
+              ),
+            ),
             Expanded(
               child: GridView(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -82,7 +123,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Facebook",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                //color: Colors.white,
+                              //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
