@@ -228,7 +228,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             height: 16,
                           ),
                           Text(
-                            "UTILITY",
+                            "Quora",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               //color: Colors.white,
@@ -264,7 +264,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             height: 16,
                           ),
                           Text(
-                            "UTILITY",
+                            "Youtube",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               //color: Colors.white,
@@ -300,7 +300,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             height: 16,
                           ),
                           Text(
-                            "UTILITY",
+                            "Linkedin",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               //color: Colors.white,
