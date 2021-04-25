@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/SearchBar/SearchScreen.dart';
+import 'package:kit_360/SearchBar/next_screen.dart';
 import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
 import 'package:kit_360/WebView/Social_Media/Web_Social_Media/facebook_web.dart';
 import 'package:page_transition/page_transition.dart';
@@ -12,6 +14,33 @@ class HealthAndFitness extends StatefulWidget {
 }
 
 class _HealthAndFitnessState extends State<HealthAndFitness> {
+  List<CountryModel> countryModelList = <CountryModel>[
+    CountryModel(
+        'Blood Oxygen', 'health and fitness/blood-oxygen', NextScreen()),
+    CountryModel(
+        'BMI Calculator', 'health and fitness/bmi-calculator', NextScreen()),
+    CountryModel('Calories Calculator',
+        'health and fitness/calories-calculator', NextScreen()),
+    CountryModel('Heart Rate', 'health and fitness/heart-rate', NextScreen()),
+    CountryModel('Meditation', 'health and fitness/meditation', NextScreen()),
+    CountryModel(
+        'Step Tracker', 'health and fitness/step-tracker', NextScreen()),
+    CountryModel(
+        'Stress Notedown', 'health and fitness/stress-notedown', NextScreen()),
+    CountryModel(
+        'Water Tracker', 'health and fitness/water-tracker', NextScreen()),
+    CountryModel(
+        'Women Health', 'health and fitness/women-health', NextScreen()),
+    CountryModel(
+        'Workout Tracker', 'health and fitness/workout-tracker', NextScreen()),
+  ];
+  @override
+  void initState() {
+    // TODO: implement initState
+    countryModelListGlobal2 = countryModelList;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -34,7 +63,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                           duration: const Duration(milliseconds: 500),
                           alignment: Alignment.topRight,
                           type: PageTransitionType.scale,
-                          child: SearchScreen(countryModelListGlobal)));
+                          child: SearchScreen(countryModelListGlobal2)));
                 },
                 child: Icon(
                   Icons.search,

@@ -49,7 +49,24 @@ class _CategoryAreaState extends State<CategoryArea> {
     CountryModel('Sticky Notes', 'productivity/sticky-notes', NextScreen()),
     CountryModel('To Do List', 'productivity/to-do-list', NextScreen()),
     CountryModel('Voice Recorder', 'productivity/voice-recorder', NextScreen()),
-    CountryModel('Clock', 'utility/clock', NextScreen()),
+    CountryModel(
+        'Blood Oxygen', 'health and fitness/blood-oxygen', NextScreen()),
+    CountryModel(
+        'BMI Calculator', 'health and fitness/bmi-calculator', NextScreen()),
+    CountryModel('Calories Calculator',
+        'health and fitness/calories-calculator', NextScreen()),
+    CountryModel('Heart Rate', 'health and fitness/heart-rate', NextScreen()),
+    CountryModel('Meditation', 'health and fitness/meditation', NextScreen()),
+    CountryModel(
+        'Step Tracker', 'health and fitness/step-tracker', NextScreen()),
+    CountryModel(
+        'Stress Notedown', 'health and fitness/stress-notedown', NextScreen()),
+    CountryModel(
+        'Water Tracker', 'health and fitness/water-tracker', NextScreen()),
+    CountryModel(
+        'Women Health', 'health and fitness/women-health', NextScreen()),
+    CountryModel(
+        'Workout Tracker', 'health and fitness/workout-tracker', NextScreen()),
     CountryModel('Barcode Scanner', 'utility/barcode-scanner-2', NextScreen()),
     CountryModel('Calculator', 'utility/calculator', NextScreen()),
     CountryModel('Compass', 'utility/compass', NextScreen()),
