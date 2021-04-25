@@ -25,13 +25,13 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-    - assets/social_media/
+    - assets/social media/
     - assets/utility/
     - assets/productivity/
     - assets/news/
     - assets/education/
-    - assets/health_and_fitness/
-    - assets/shopping_and_payments/
+    - assets/health and fitness/
+    - assets/shopping and payments/
     - assets/entertainment/
 
   # fonts:

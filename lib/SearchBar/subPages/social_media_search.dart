@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kit_360/Screens/Category/subPages/social_media.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:kit_360/SearchBar/Components/search_bar_comp.dart';
@@ -7,24 +8,15 @@ import 'package:kit_360/SearchBar/next_screen.dart';
 import 'package:kit_360/main.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 
-class SearchScreen extends StatefulWidget {
+class SocialMediaSearch extends StatefulWidget {
   final List<CountryModel> countryModelList;
   @override
   _SearchScreenState createState() => _SearchScreenState();
 
-  const SearchScreen(this.countryModelList);
+  const SocialMediaSearch(this.countryModelList);
 }
 
-class _SearchScreenState extends State<SearchScreen> {
-  // List<CountryModel2> countryModelList2 = <CountryModel2>[
-  //   CountryModel2('Alarm', 'alarm.png', NextScreen()),
-  //   CountryModel2('Calculator', 'calculator.png', NextScreen()),
-  //   CountryModel2('Camera', 'camera.png', NextScreen()),
-  //   CountryModel2('Linkedin', 'linkedin.png', NextScreen()),
-  //   CountryModel2('Quora', 'quora.png', NextScreen()),
-  //   CountryModel2('Youtube', 'youtube.png', NextScreen())
-  // ];
-
+class _SearchScreenState extends State<SocialMediaSearch> {
   @override
   void initState() {
     // TODO: implement initState
@@ -219,14 +211,12 @@ class _SearchScreenState extends State<SearchScreen> {
     if (search == "error") throw Error();
     List<CountryModel> filterCountryList = [];
 
-    widget.countryModelList.forEach((CountryModel2) {
-      if (CountryModel2.countryName
+    widget.countryModelList.forEach((CountryModel) {
+      if (CountryModel.countryName
               .toLowerCase()
               .contains(search.toLowerCase()) ||
-          CountryModel2.countryCode
-              .toLowerCase()
-              .contains(search.toLowerCase()))
-        filterCountryList.add(CountryModel2);
+          CountryModel.countryCode.toLowerCase().contains(search.toLowerCase()))
+        filterCountryList.add(CountryModel);
     });
 
     final suggestionList =

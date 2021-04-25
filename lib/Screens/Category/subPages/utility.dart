@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Category/components/search_bar_area_sub_category.dart';
 import 'package:kit_360/Screens/Category/components/sub_category_area.dart';
+import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/SearchBar/SearchScreen.dart';
+import 'package:kit_360/SearchBar/next_screen.dart';
 import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
 import 'package:kit_360/WebView/Social_Media/Web_Social_Media/facebook_web.dart';
 import 'package:page_transition/page_transition.dart';
@@ -14,6 +16,24 @@ class Utility extends StatefulWidget {
 }
 
 class _UtilityState extends State<Utility> {
+  List<CountryModel> countryModelList = <CountryModel>[
+    CountryModel('Clock', 'utility/clock', NextScreen()),
+    CountryModel('Barcode Scanner', 'utility/barcode-scanner-2', NextScreen()),
+    CountryModel('Calculator', 'utility/calculator', NextScreen()),
+    CountryModel('Compass', 'utility/compass', NextScreen()),
+    CountryModel('Dictionary', 'utility/dictionary', NextScreen()),
+    CountryModel('Speed Meter', 'utility/internet-speedmeter', NextScreen()),
+    CountryModel('Torch', 'utility/torch', NextScreen()),
+    CountryModel('Translator', 'utility/translator', NextScreen()),
+    CountryModel('Weather', 'utility/weather', NextScreen()),
+  ];
+  @override
+  void initState() {
+    // TODO: implement initState
+    countryModelListGlobal2 = countryModelList;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -36,7 +56,7 @@ class _UtilityState extends State<Utility> {
                           duration: const Duration(milliseconds: 500),
                           alignment: Alignment.topRight,
                           type: PageTransitionType.scale,
-                          child: SearchScreen(countryModelListGlobal)));
+                          child: SearchScreen(countryModelListGlobal2)));
                 },
                 child: Icon(
                   Icons.search,

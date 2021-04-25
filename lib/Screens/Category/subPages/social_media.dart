@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Category/subPages/utility.dart';
+import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/SearchBar/SearchScreen.dart';
+import 'package:kit_360/SearchBar/next_screen.dart';
 import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/blogger_web.dart';
 import 'package:kit_360/WebView/Social_Media/Web_Social_Media/facebook_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/github_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/instagram_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/linkedin_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/pinterest_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/reddit_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/tumblr_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/twitter_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/quora_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/yahoo_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/youtube_web.dart';
 import 'package:page_transition/page_transition.dart';
 
 class SocialMedia extends StatefulWidget {
@@ -13,6 +26,28 @@ class SocialMedia extends StatefulWidget {
 }
 
 class _SocialMediaState extends State<SocialMedia> {
+  List<CountryModel> countryModelList = <CountryModel>[
+    CountryModel('Facebook', 'social media/facebook', FacebookWeb()),
+    CountryModel('Blogger', 'social media/blogger', BloggerWeb()),
+    CountryModel('Github', 'social media/github', GithubWeb()),
+    CountryModel('Instagram', 'social media/instagram', InstagramWeb()),
+    CountryModel('Linkedin', 'social media/linkedin', LinkedinWeb()),
+    CountryModel('Pinterest', 'social media/pinterest', PinterestWeb()),
+    CountryModel('Quora', 'social media/quora', QuoraWeb()),
+    CountryModel('Reddit', 'social media/reddit', RedditWeb()),
+    CountryModel('Tumblr', 'social media/tumblr', TwitterWeb()),
+    CountryModel('Twitter', 'social media/twitter', TwitterWeb()),
+    CountryModel('Yahoo', 'social media/yahoo', YahooWeb()),
+    CountryModel('Youtube', 'social media/youtube', YoutubeWeb())
+  ];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    countryModelListGlobal2 = countryModelList;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -35,7 +70,7 @@ class _SocialMediaState extends State<SocialMedia> {
                           duration: const Duration(milliseconds: 500),
                           alignment: Alignment.topRight,
                           type: PageTransitionType.scale,
-                          child: SearchScreen(countryModelListGlobal)));
+                          child: SearchScreen(countryModelListGlobal2)));
                 },
                 child: Icon(
                   Icons.search,
@@ -56,7 +91,7 @@ class _SocialMediaState extends State<SocialMedia> {
                   Column(
                     children: <Widget>[
                       Image.asset(
-                        'assets/social_media/social_media.png',
+                        'assets/social media/social_media.png',
                         alignment: Alignment.center,
                         height: size.height * 0.15,
                       ),
@@ -81,7 +116,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(24.0),
                         borderSide:
-                        BorderSide(color: Colors.grey[300], width: 1),
+                            BorderSide(color: Colors.grey[300], width: 1),
                       ),
                       contentPadding: EdgeInsets.symmetric(
                           horizontal: 18.0, vertical: 18.0),
@@ -111,7 +146,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/facebook.png',
+                            'assets/social media/facebook.png',
                             width: 80,
                             height: 80,
                           ),
@@ -122,7 +157,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Facebook",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -138,7 +173,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => InstagramWeb(),
                         ),
                       );
                     },
@@ -147,7 +182,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/instagram.png',
+                            'assets/social media/instagram.png',
                             width: 80,
                             height: 80,
                           ),
@@ -158,7 +193,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Instagram",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -174,7 +209,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Utility(),
+                          builder: (context) => TwitterWeb(),
                         ),
                       );
                     },
@@ -183,7 +218,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/twitter.png',
+                            'assets/social media/twitter.png',
                             width: 80,
                             height: 80,
                           ),
@@ -194,7 +229,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Twitter",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -210,7 +245,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Utility(),
+                          builder: (context) => QuoraWeb(),
                         ),
                       );
                     },
@@ -219,7 +254,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/quora.png',
+                            'assets/social media/quora.png',
                             width: 80,
                             height: 80,
                           ),
@@ -230,7 +265,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Quora",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -246,7 +281,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Utility(),
+                          builder: (context) => YoutubeWeb(),
                         ),
                       );
                     },
@@ -255,7 +290,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/youtube.png',
+                            'assets/social media/youtube.png',
                             width: 80,
                             height: 80,
                           ),
@@ -266,7 +301,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Youtube",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -282,7 +317,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Utility(),
+                          builder: (context) => LinkedinWeb(),
                         ),
                       );
                     },
@@ -291,7 +326,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/linkedin.png',
+                            'assets/social media/linkedin.png',
                             width: 80,
                             height: 80,
                           ),
@@ -302,7 +337,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Linkedin",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -318,7 +353,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Utility(),
+                          builder: (context) => NextScreen(),
                         ),
                       );
                     },
@@ -327,7 +362,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/discord.png',
+                            'assets/social media/discord.png',
                             width: 80,
                             height: 80,
                           ),
@@ -338,7 +373,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Discord",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -354,7 +389,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Utility(),
+                          builder: (context) => NextScreen(),
                         ),
                       );
                     },
@@ -363,7 +398,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/twitch.png',
+                            'assets/social media/twitch.png',
                             width: 80,
                             height: 80,
                           ),
@@ -374,7 +409,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Twitch",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -390,7 +425,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => BloggerWeb(),
                         ),
                       );
                     },
@@ -399,7 +434,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/blogger.png',
+                            'assets/social media/blogger.png',
                             width: 80,
                             height: 80,
                           ),
@@ -410,7 +445,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Blogger",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -426,7 +461,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => GithubWeb(),
                         ),
                       );
                     },
@@ -435,7 +470,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/github.png',
+                            'assets/social media/github.png',
                             width: 80,
                             height: 80,
                           ),
@@ -446,7 +481,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Github",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -462,7 +497,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => NextScreen(),
                         ),
                       );
                     },
@@ -471,7 +506,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/messenger.png',
+                            'assets/social media/messenger.png',
                             width: 80,
                             height: 80,
                           ),
@@ -482,7 +517,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Messenger",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -498,7 +533,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => PinterestWeb(),
                         ),
                       );
                     },
@@ -507,7 +542,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/pinterest.png',
+                            'assets/social media/pinterest.png',
                             width: 80,
                             height: 80,
                           ),
@@ -518,7 +553,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Pinterest",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -534,7 +569,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => RedditWeb(),
                         ),
                       );
                     },
@@ -543,7 +578,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/reddit.png',
+                            'assets/social media/reddit.png',
                             width: 80,
                             height: 80,
                           ),
@@ -554,7 +589,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Reddit",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -570,7 +605,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => NextScreen(),
                         ),
                       );
                     },
@@ -579,7 +614,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/snapchat.png',
+                            'assets/social media/snapchat.png',
                             width: 80,
                             height: 80,
                           ),
@@ -590,7 +625,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Snapchat",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -606,7 +641,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => YahooWeb(),
                         ),
                       );
                     },
@@ -615,7 +650,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/yahoo.png',
+                            'assets/social media/yahoo.png',
                             width: 80,
                             height: 80,
                           ),
@@ -626,7 +661,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Yahoo",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -642,7 +677,7 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => TumblrWeb(),
                         ),
                       );
                     },
@@ -662,7 +697,7 @@ class _SocialMediaState extends State<SocialMedia> {
                             "Tumblr",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),

@@ -43,7 +43,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
               )),
         ],
         actionsIconTheme:
-        IconThemeData(size: 26.0, color: Colors.grey, opacity: 10.0),
+            IconThemeData(size: 26.0, color: Colors.grey, opacity: 10.0),
       ),
       body: SafeArea(
         child: Column(
@@ -55,7 +55,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                   Column(
                     children: <Widget>[
                       Image.asset(
-                        'assets/health_and_fitness/health_and_fitness.png',
+                        'assets/health and fitness/health_and_fitness.png',
                         alignment: Alignment.center,
                         height: size.height * 0.15,
                       ),
@@ -80,7 +80,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(24.0),
                         borderSide:
-                        BorderSide(color: Colors.grey[300], width: 1),
+                            BorderSide(color: Colors.grey[300], width: 1),
                       ),
                       contentPadding: EdgeInsets.symmetric(
                           horizontal: 18.0, vertical: 18.0),
@@ -110,7 +110,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/health_and_fitness/blood-oxygen.png',
+                            'assets/health and fitness/blood-oxygen.png',
                             width: 80,
                             height: 80,
                           ),
@@ -121,7 +121,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                             "Blood Oxygen",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -146,7 +146,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/health_and_fitness/bmi-calculator.png',
+                            'assets/health and fitness/bmi-calculator.png',
                             width: 80,
                             height: 80,
                           ),
@@ -157,7 +157,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                             "BMI Calculator",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -182,7 +182,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/health_and_fitness/calories-calculator.png',
+                            'assets/health and fitness/calories-calculator.png',
                             width: 80,
                             height: 80,
                           ),
@@ -193,7 +193,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                             "Calorie Calculator",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -218,7 +218,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/health_and_fitness/heart-rate.png',
+                            'assets/health and fitness/heart-rate.png',
                             width: 80,
                             height: 80,
                           ),
@@ -229,7 +229,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                             "Heart Rate",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -254,7 +254,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/health_and_fitness/meditation.png',
+                            'assets/health and fitness/meditation.png',
                             width: 80,
                             height: 80,
                           ),
@@ -265,7 +265,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                             "Meditation",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -290,7 +290,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/health_and_fitness/step-tracker.png',
+                            'assets/health and fitness/step-tracker.png',
                             width: 80,
                             height: 80,
                           ),
@@ -301,7 +301,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                             "Step Tracker",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -326,7 +326,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/health_and_fitness/stress-notedown.png',
+                            'assets/health and fitness/stress-notedown.png',
                             width: 80,
                             height: 80,
                           ),
@@ -337,7 +337,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                             "Stress",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -362,7 +362,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/health_and_fitness/water-tracker.png',
+                            'assets/health and fitness/water-tracker.png',
                             width: 80,
                             height: 80,
                           ),
@@ -373,7 +373,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                             "Water Track",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -398,7 +398,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/health_and_fitness/women-health.png',
+                            'assets/health and fitness/women-health.png',
                             width: 80,
                             height: 80,
                           ),
@@ -409,7 +409,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                             "Women Health",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -434,7 +434,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/health_and_fitness/workout-tracker.png',
+                            'assets/health and fitness/workout-tracker.png',
                             width: 80,
                             height: 80,
                           ),
@@ -445,7 +445,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                             "Workout Track",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),

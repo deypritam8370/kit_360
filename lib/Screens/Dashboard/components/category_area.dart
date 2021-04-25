@@ -10,6 +10,17 @@ import 'package:kit_360/Screens/Category/subPages/social_media.dart';
 import 'package:kit_360/Screens/Category/subPages/utility.dart';
 import 'package:kit_360/SearchBar/next_screen.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/blogger_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/facebook_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/github_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/instagram_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/linkedin_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/pinterest_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/quora_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/reddit_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/twitter_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/yahoo_web.dart';
+import 'package:kit_360/WebView/Social_Media/Web_Social_Media/youtube_web.dart';
 
 class CountryModel {
   String countryName;
@@ -30,12 +41,35 @@ class CategoryArea extends StatefulWidget {
 
 class _CategoryAreaState extends State<CategoryArea> {
   List<CountryModel> countryModelList = <CountryModel>[
-    //CountryModel('Facebook', 'facebook', NextScreen()),
-    //CountryModel('Social Media', 'social-media', NextScreen()),
-    //CountryModel('Camera', 'camera.png', NextScreen()),
-    CountryModel('Linkedin', 'social media_linkedin', NextScreen()),
-    CountryModel('Quora', 'social media_quora', NextScreen()),
-    CountryModel('Youtube', 'social media_youtube', NextScreen())
+    CountryModel('Calendar', 'productivity/calender2', NextScreen()),
+    CountryModel('Notes', 'productivity/notes', NextScreen()),
+    CountryModel('Reminder', 'productivity/reminder', NextScreen()),
+    CountryModel(
+        'Screen Recorder', 'productivity/screen-recorder', NextScreen()),
+    CountryModel('Sticky Notes', 'productivity/sticky-notes', NextScreen()),
+    CountryModel('To Do List', 'productivity/to-do-list', NextScreen()),
+    CountryModel('Voice Recorder', 'productivity/voice-recorder', NextScreen()),
+    CountryModel('Clock', 'utility/clock', NextScreen()),
+    CountryModel('Barcode Scanner', 'utility/barcode-scanner-2', NextScreen()),
+    CountryModel('Calculator', 'utility/calculator', NextScreen()),
+    CountryModel('Compass', 'utility/compass', NextScreen()),
+    CountryModel('Dictionary', 'utility/dictionary', NextScreen()),
+    CountryModel('Speed Meter', 'utility/internet-speedmeter', NextScreen()),
+    CountryModel('Torch', 'utility/torch', NextScreen()),
+    CountryModel('Translator', 'utility/translator', NextScreen()),
+    CountryModel('Weather', 'utility/weather', NextScreen()),
+    CountryModel('Facebook', 'social media/facebook', FacebookWeb()),
+    CountryModel('Blogger', 'social media/blogger', BloggerWeb()),
+    CountryModel('Github', 'social media/github', GithubWeb()),
+    CountryModel('Instagram', 'social media/instagram', InstagramWeb()),
+    CountryModel('Linkedin', 'social media/linkedin', LinkedinWeb()),
+    CountryModel('Pinterest', 'social media/pinterest', PinterestWeb()),
+    CountryModel('Quora', 'social media/quora', QuoraWeb()),
+    CountryModel('Reddit', 'social media/reddit', RedditWeb()),
+    CountryModel('Tumblr', 'social media/tumblr', TwitterWeb()),
+    CountryModel('Twitter', 'social media/twitter', TwitterWeb()),
+    CountryModel('Yahoo', 'social media/yahoo', YahooWeb()),
+    CountryModel('Youtube', 'social media/youtube', YoutubeWeb())
   ];
 
   @override
@@ -167,7 +201,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'assets/social_media/social_media.png',
+                    'assets/social media/social_media.png',
                     width: 80,
                     height: 80,
                   ),
@@ -255,7 +289,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'assets/shopping_and_payments/shopping.png',
+                    'assets/shopping and payments/shopping.png',
                     width: 80,
                     height: 80,
                   ),
@@ -299,7 +333,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    'assets/health_and_fitness/health_and_fitness.png',
+                    'assets/health and fitness/health_and_fitness.png',
                     width: 80,
                     height: 80,
                   ),

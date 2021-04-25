@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kit_360/Screens/Category/subPages/social_media.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:kit_360/SearchBar/Components/search_bar_comp.dart';
@@ -7,23 +8,15 @@ import 'package:kit_360/SearchBar/next_screen.dart';
 import 'package:kit_360/main.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 
-class SearchScreen extends StatefulWidget {
+class ProductivitySearch extends StatefulWidget {
   final List<CountryModel> countryModelList;
   @override
   _SearchScreenState createState() => _SearchScreenState();
 
-  const SearchScreen(this.countryModelList);
+  const ProductivitySearch(this.countryModelList);
 }
 
-class _SearchScreenState extends State<SearchScreen> {
-  // List<CountryModel2> countryModelList2 = <CountryModel2>[
-  //   CountryModel2('Alarm', 'alarm.png', NextScreen()),
-  //   CountryModel2('Calculator', 'calculator.png', NextScreen()),
-  //   CountryModel2('Camera', 'camera.png', NextScreen()),
-  //   CountryModel2('Linkedin', 'linkedin.png', NextScreen()),
-  //   CountryModel2('Quora', 'quora.png', NextScreen()),
-  //   CountryModel2('Youtube', 'youtube.png', NextScreen())
-  // ];
+class _SearchScreenState extends State<ProductivitySearch> {
 
   @override
   void initState() {
@@ -106,71 +99,71 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 
   Widget countryGenerateColumn(CountryModel countryModel, int index) => InkWell(
-        child: Stack(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(
-                  left: 5.0, top: 5.0, right: 5.0, bottom: 5.0),
-              child: ConstrainedBox(
-                constraints: BoxConstraints(
-                  minHeight: 50,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.fromLTRB(8.0, 5.0, 0.0, 5.0),
-                      width: MediaQuery.of(context).size.width * .60,
-                      color: Colors.transparent,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          SizedBox(
+    child: Stack(
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(
+              left: 5.0, top: 5.0, right: 5.0, bottom: 5.0),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: 50,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.fromLTRB(8.0, 5.0, 0.0, 5.0),
+                  width: MediaQuery.of(context).size.width * .60,
+                  color: Colors.transparent,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      SizedBox(
+                        height: 40,
+                        child: GestureDetector(
+                          // height: 40,
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                PageTransition(
+                                    duration:
+                                    const Duration(milliseconds: 500),
+                                    alignment: Alignment.topRight,
+                                    type: PageTransitionType.scale,
+                                    child: countryModel.tap));
+                          },
+                          child: SizedBox(
                             height: 40,
-                            child: GestureDetector(
-                              // height: 40,
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    PageTransition(
-                                        duration:
-                                            const Duration(milliseconds: 500),
-                                        alignment: Alignment.topRight,
-                                        type: PageTransitionType.scale,
-                                        child: countryModel.tap));
-                              },
-                              child: SizedBox(
-                                height: 40,
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                        width: 40,
-                                        child: Image.asset('assets/' +
-                                            countryModel.countryCode +
-                                            '.png')),
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    Text(countryModel.countryName,
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis),
-                                  ],
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                    width: 40,
+                                    child: Image.asset('assets/' +
+                                        countryModel.countryCode +
+                                        '.png')),
+                                SizedBox(
+                                  width: 20,
                                 ),
-                              ),
+                                Text(countryModel.countryName,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis),
+                              ],
                             ),
                           ),
-                          SizedBox(height: 8),
-                          Divider(height: 0.5)
-                        ],
+                        ),
                       ),
-                    ),
-                  ],
+                      SizedBox(height: 8),
+                      Divider(height: 0.5)
+                    ],
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
-      );
+      ],
+    ),
+  );
 
 //  Future<List<CountryModel>> getCountryListFromApi(String search) async {
 //    var _param = {
@@ -203,8 +196,8 @@ class _SearchScreenState extends State<SearchScreen> {
 
     widget.countryModelList.forEach((CountryModel) {
       if (CountryModel.countryName
-              .toLowerCase()
-              .contains(search.toLowerCase()) ||
+          .toLowerCase()
+          .contains(search.toLowerCase()) ||
           CountryModel.countryCode.toLowerCase().contains(search.toLowerCase()))
         filterCountryList.add(CountryModel);
     });
@@ -219,18 +212,18 @@ class _SearchScreenState extends State<SearchScreen> {
     if (search == "error") throw Error();
     List<CountryModel> filterCountryList = [];
 
-    widget.countryModelList.forEach((CountryModel2) {
-      if (CountryModel2.countryName
-              .toLowerCase()
-              .contains(search.toLowerCase()) ||
-          CountryModel2.countryCode
+    widget.countryModelList.forEach((CountryModel) {
+      if (CountryModel.countryName
+          .toLowerCase()
+          .contains(search.toLowerCase()) ||
+          CountryModel.countryCode
               .toLowerCase()
               .contains(search.toLowerCase()))
-        filterCountryList.add(CountryModel2);
+        filterCountryList.add(CountryModel);
     });
 
     final suggestionList =
-        search.isEmpty ? widget.countryModelList : filterCountryList;
+    search.isEmpty ? widget.countryModelList : filterCountryList;
 
     return suggestionList;
   }

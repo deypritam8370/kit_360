@@ -1,44 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:kit_360/Screens/Category/subPages/social_media.dart';
+import 'package:kit_360/SearchBar/Constants.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:kit_360/SearchBar/Components/search_bar_comp.dart';
 import 'package:flutter/services.dart';
 import 'package:kit_360/SearchBar/next_screen.dart';
-import 'package:kit_360/SearchBar/Constants.dart';
-import 'package:kit_360/SearchBar/Components/search_bar_comp.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:kit_360/main.dart';
+import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 
-class CountryModel2 {
-  String countryName;
-  String countryCode;
-  Widget tap;
-  @override
-  String toString() {
-    return '$countryName $countryCode';
-  }
-
-  CountryModel2(this.countryName, this.countryCode, this.tap);
-}
-
-class SearchScreen2 extends StatefulWidget {
-  final List<CountryModel2> countryModelList2;
+class UtilitySearch extends StatefulWidget {
+  final List<CountryModel> countryModelList;
   @override
   _SearchScreenState createState() => _SearchScreenState();
 
-  const SearchScreen2(this.countryModelList2);
+  const UtilitySearch(this.countryModelList);
 }
 
-class _SearchScreenState extends State<SearchScreen2> {
-  List<CountryModel2> countryModelList2 = <CountryModel2>[
-    CountryModel2('Alarm', 'alarm.png', NextScreen()),
-    CountryModel2('Calculator', 'calculator.png', NextScreen()),
-    CountryModel2('Camera', 'camera.png', NextScreen()),
-    //CountryModel2('Linkedin', 'linkedin.png', NextScreen()),
-    CountryModel2('Quora', 'quora.png', NextScreen()),
-    //CountryModel2('Youtube', 'youtube.png', NextScreen())
-  ];
-
+class _SearchScreenState extends State<UtilitySearch> {
   @override
   void initState() {
     // TODO: implement initState
-    countryModelListGlobal2 = countryModelList2;
+    //countryModelListGlobal = countryModelList;
     super.initState();
   }
 
@@ -58,13 +40,13 @@ class _SearchScreenState extends State<SearchScreen2> {
 
   // TODO: CountrySearchBar
   Widget searchBar(BuildContext context) {
-    return SearchBar<CountryModel2>(
+    return SearchBar<CountryModel>(
       searchBarPadding: EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 5),
       headerPadding: EdgeInsets.only(left: 0, right: 0),
       listPadding: EdgeInsets.only(left: 0, right: 0),
-      hintText: "Search Placeholder",
+      hintText: "Search For Apps",
       hintStyle: TextStyle(
-        color: Colors.black54,
+        color: Colors.white,
       ),
       textStyle: TextStyle(
         color: Colors.black,
@@ -74,8 +56,8 @@ class _SearchScreenState extends State<SearchScreen2> {
       shrinkWrap: true,
       mainAxisSpacing: 5,
       crossAxisSpacing: 5,
-      suggestions: widget.countryModelList2,
-      cancellationWidget: Text("Cancel"),
+      suggestions: widget.countryModelList,
+      cancellationWidget: Text("Close"),
       minimumChars: 1,
 //      placeHolder: Center(
 //        child: Padding(
@@ -86,7 +68,7 @@ class _SearchScreenState extends State<SearchScreen2> {
       emptyWidget: Center(
         child: Padding(
           padding: const EdgeInsets.only(left: 10, right: 10),
-          child: Text("There is no any data found"),
+          child: Text("NO APPS FOUND"),
         ),
       ),
       onError: (error) {
@@ -106,17 +88,16 @@ class _SearchScreenState extends State<SearchScreen2> {
       onCancelled: () {
         Navigator.pop(context);
       },
-      buildSuggestion: (CountryModel2 countryModel, int index) {
+      buildSuggestion: (CountryModel countryModel, int index) {
         return countryGenerateColumn(countryModel, index);
       },
-      onItemFound: (CountryModel2 countryModel, int index) {
+      onItemFound: (CountryModel countryModel, int index) {
         return countryGenerateColumn(countryModel, index);
       },
     );
   }
 
-  Widget countryGenerateColumn(CountryModel2 countryModel, int index) =>
-      InkWell(
+  Widget countryGenerateColumn(CountryModel countryModel, int index) => InkWell(
         child: Stack(
           children: <Widget>[
             Padding(
@@ -150,16 +131,23 @@ class _SearchScreenState extends State<SearchScreen2> {
                                         type: PageTransitionType.scale,
                                         child: countryModel.tap));
                               },
-                              child: Row(
-                                children: [
-                                  Image.asset(countryModel.countryCode),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Text(countryModel.countryName,
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis),
-                                ],
+                              child: SizedBox(
+                                height: 40,
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                        width: 40,
+                                        child: Image.asset('assets/' +
+                                            countryModel.countryCode +
+                                            '.png')),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(countryModel.countryName,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -199,44 +187,40 @@ class _SearchScreenState extends State<SearchScreen2> {
 //    return countryModelList;
 //  }
 
-  Future<List<CountryModel2>> getCountrySearch(String search) async {
+  Future<List<CountryModel>> getCountrySearch(String search) async {
     print("Resident search = $search");
     if (search == "empty") return [];
     if (search == "error") throw Error();
-    List<CountryModel2> filterCountryList = [];
+    List<CountryModel> filterCountryList = [];
 
-    widget.countryModelList2.forEach((CountryModel2) {
-      if (CountryModel2.countryName
+    widget.countryModelList.forEach((CountryModel) {
+      if (CountryModel.countryName
               .toLowerCase()
               .contains(search.toLowerCase()) ||
-          CountryModel2.countryCode
-              .toLowerCase()
-              .contains(search.toLowerCase()))
-        filterCountryList.add(CountryModel2);
+          CountryModel.countryCode.toLowerCase().contains(search.toLowerCase()))
+        filterCountryList.add(CountryModel);
     });
 
     return filterCountryList;
   }
 
-  Future<List<CountryModel2>> getCountrySearchWithSuggestion(
+  Future<List<CountryModel>> getCountrySearchWithSuggestion(
       String search) async {
     print("Resident search = $search");
     if (search == "empty") return [];
     if (search == "error") throw Error();
-    List<CountryModel2> filterCountryList = [];
+    List<CountryModel> filterCountryList = [];
 
-    widget.countryModelList2.forEach((CountryModel2) {
-      if (CountryModel2.countryName
+    widget.countryModelList.forEach((CountryModel) {
+      if (CountryModel.countryName
               .toLowerCase()
               .contains(search.toLowerCase()) ||
-          CountryModel2.countryCode
-              .toLowerCase()
-              .contains(search.toLowerCase()))
-        filterCountryList.add(CountryModel2);
+          CountryModel.countryCode.toLowerCase().contains(search.toLowerCase()))
+        filterCountryList.add(CountryModel);
     });
 
     final suggestionList =
-        search.isEmpty ? widget.countryModelList2 : filterCountryList;
+        search.isEmpty ? widget.countryModelList : filterCountryList;
 
     return suggestionList;
   }
