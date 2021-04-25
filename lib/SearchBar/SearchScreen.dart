@@ -54,10 +54,10 @@ class _SearchScreenState extends State<SearchScreen> {
       listPadding: EdgeInsets.only(left: 0, right: 0),
       hintText: "Search For Apps",
       hintStyle: TextStyle(
-        color: Colors.white,
-      ),
+          //color: Colors.white,
+          ),
       textStyle: TextStyle(
-        color: Colors.black,
+        //color: Colors.black,
         fontWeight: FontWeight.normal,
       ),
       iconActiveColor: Colors.deepPurple,
