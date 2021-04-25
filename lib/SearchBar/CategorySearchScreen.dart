@@ -7,15 +7,15 @@ import 'package:kit_360/SearchBar/next_screen.dart';
 import 'package:kit_360/main.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 
-class SearchScreen extends StatefulWidget {
+class CategorySearchScreen extends StatefulWidget {
   final List<CountryModel> countryModelList;
   @override
   _SearchScreenState createState() => _SearchScreenState();
 
-  const SearchScreen(this.countryModelList);
+  const CategorySearchScreen(this.countryModelList);
 }
 
-class _SearchScreenState extends State<SearchScreen> {
+class _SearchScreenState extends State<CategorySearchScreen> {
   @override
   void initState() {
     // TODO: implement initState
@@ -193,10 +193,7 @@ class _SearchScreenState extends State<SearchScreen> {
     List<CountryModel> filterCountryList = [];
 
     widget.countryModelList.forEach((CountryModel) {
-      if (CountryModel.countryName
-              .toLowerCase()
-              .contains(search.toLowerCase()) ||
-          CountryModel.countryCode.toLowerCase().contains(search.toLowerCase()))
+      if (CountryModel.countryName.toLowerCase().contains(search.toLowerCase()))
         filterCountryList.add(CountryModel);
     });
 
@@ -212,12 +209,8 @@ class _SearchScreenState extends State<SearchScreen> {
 
     widget.countryModelList.forEach((CountryModel2) {
       if (CountryModel2.countryName
-              .toLowerCase()
-              .contains(search.toLowerCase()) ||
-          CountryModel2.countryCode
-              .toLowerCase()
-              .contains(search.toLowerCase()))
-        filterCountryList.add(CountryModel2);
+          .toLowerCase()
+          .contains(search.toLowerCase())) filterCountryList.add(CountryModel2);
     });
 
     final suggestionList =

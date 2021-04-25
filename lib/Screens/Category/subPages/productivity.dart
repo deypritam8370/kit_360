@@ -3,6 +3,7 @@ import 'package:kit_360/Screens/Category/components/search_bar_area_sub_category
 import 'package:kit_360/Screens/Category/components/sub_category_area.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
+import 'package:kit_360/SearchBar/CategorySearchScreen.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/SearchBar/SearchScreen.dart';
 import 'package:kit_360/SearchBar/next_screen.dart';
@@ -55,7 +56,8 @@ class _ProductivityState extends State<Productivity> {
                           duration: const Duration(milliseconds: 500),
                           alignment: Alignment.topRight,
                           type: PageTransitionType.scale,
-                          child: SearchScreen(countryModelListGlobal2)));
+                          child:
+                              CategorySearchScreen(countryModelListGlobal2)));
                 },
                 child: Icon(
                   Icons.search,
@@ -64,7 +66,7 @@ class _ProductivityState extends State<Productivity> {
               )),
         ],
         actionsIconTheme:
-        IconThemeData(size: 26.0, color: Colors.grey, opacity: 10.0),
+            IconThemeData(size: 26.0, color: Colors.grey, opacity: 10.0),
       ),
       body: SafeArea(
         child: Column(
@@ -101,7 +103,7 @@ class _ProductivityState extends State<Productivity> {
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(24.0),
                         borderSide:
-                        BorderSide(color: Colors.grey[300], width: 1),
+                            BorderSide(color: Colors.grey[300], width: 1),
                       ),
                       contentPadding: EdgeInsets.symmetric(
                           horizontal: 18.0, vertical: 18.0),
@@ -142,7 +144,7 @@ class _ProductivityState extends State<Productivity> {
                             "Calender",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -178,7 +180,7 @@ class _ProductivityState extends State<Productivity> {
                             "Notes",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -214,7 +216,7 @@ class _ProductivityState extends State<Productivity> {
                             "Reminder",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -250,7 +252,7 @@ class _ProductivityState extends State<Productivity> {
                             "To Do List",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -286,7 +288,7 @@ class _ProductivityState extends State<Productivity> {
                             "Sticky Notes",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -322,7 +324,7 @@ class _ProductivityState extends State<Productivity> {
                             "Voice Recorder",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -358,7 +360,7 @@ class _ProductivityState extends State<Productivity> {
                             "Screen Recorder",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              //color: Colors.white,
+                                //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),

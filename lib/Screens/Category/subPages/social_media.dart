@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Category/subPages/utility.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
+import 'package:kit_360/SearchBar/CategorySearchScreen.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/SearchBar/SearchScreen.dart';
 import 'package:kit_360/SearchBar/next_screen.dart';
@@ -70,7 +71,8 @@ class _SocialMediaState extends State<SocialMedia> {
                           duration: const Duration(milliseconds: 500),
                           alignment: Alignment.topRight,
                           type: PageTransitionType.scale,
-                          child: SearchScreen(countryModelListGlobal2)));
+                          child:
+                              CategorySearchScreen(countryModelListGlobal2)));
                 },
                 child: Icon(
                   Icons.search,
