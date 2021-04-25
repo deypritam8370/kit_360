@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kit_360/Screens/Category/components/search_bar_area_sub_category.dart';
 import 'package:kit_360/Screens/Category/subPages/utility.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
@@ -625,6 +624,42 @@ class _SocialMediaState extends State<SocialMedia> {
                           ),
                           Text(
                             "Yahoo",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FacebookWeb(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/social_media/tumblr.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "Tumblr",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               //color: Colors.white,
