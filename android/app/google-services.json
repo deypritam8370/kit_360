@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "89036985029",
+    "project_id": "kit360-2021new",
+    "storage_bucket": "kit360-2021new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89036985029:android:2795f72518ae8f62a956ac",
+        "android_client_info": {
+          "package_name": "com.deypritam8370.kit_360"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89036985029-eb2j29k5hjtfq6i7rmbp2m119f4420up.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDddf9h4ZqBZ00ro9YoqQmGtjumusr6zY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89036985029-eb2j29k5hjtfq6i7rmbp2m119f4420up.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

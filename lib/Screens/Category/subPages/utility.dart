@@ -430,7 +430,7 @@ class _UtilityState extends State<Utility> {
                             height: 16,
                           ),
                           Text(
-                            "Speed Meter",
+                            "Internet SpeedTest",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 //color: Colors.white,

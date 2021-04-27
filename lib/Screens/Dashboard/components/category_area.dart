@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Category/subPages/education.dart';
 import 'package:kit_360/Screens/Category/subPages/entertainment.dart';
@@ -142,7 +141,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         //color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
@@ -186,7 +185,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         //color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
@@ -230,7 +229,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         //color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
@@ -274,7 +273,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         //color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
@@ -318,7 +317,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         //color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
@@ -362,7 +361,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         //color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
@@ -406,7 +405,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         //color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
@@ -450,7 +449,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         //color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
