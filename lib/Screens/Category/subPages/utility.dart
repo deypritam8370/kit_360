@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:kit_360/Screens/Category/components/search_bar_area_sub_category.dart';
-import 'package:kit_360/Screens/Category/components/sub_category_area.dart';
+import 'package:kit_360/AppTesting/torch/torchUI.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
 import 'package:kit_360/SearchBar/CategorySearchScreen.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
-import 'package:kit_360/SearchBar/SearchScreen.dart';
 import 'package:kit_360/SearchBar/next_screen.dart';
 import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
-import 'package:kit_360/WebView/Social_Media/Web_Social_Media/facebook_web.dart';
+import 'package:kit_360/WebView/Utility/dictionary_web.dart';
+import 'package:kit_360/WebView/Utility/speedtest_web.dart';
+import 'package:kit_360/WebView/Utility/translate_web.dart';
+import 'package:kit_360/WebView/Utility/weather_web.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Utility extends StatefulWidget {
@@ -125,7 +126,7 @@ class _UtilityState extends State<Utility> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => Utility(),
                         ),
                       );
                     },
@@ -161,7 +162,7 @@ class _UtilityState extends State<Utility> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => Utility(),
                         ),
                       );
                     },
@@ -197,7 +198,7 @@ class _UtilityState extends State<Utility> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Utility(),
+                          builder: (context) => DictionaryWeb(),
                         ),
                       );
                     },
@@ -305,7 +306,7 @@ class _UtilityState extends State<Utility> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Utility(),
+                          builder: (context) => TorchUI(),
                         ),
                       );
                     },
@@ -341,7 +342,7 @@ class _UtilityState extends State<Utility> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Utility(),
+                          builder: (context) => TranslateWeb(),
                         ),
                       );
                     },
@@ -377,7 +378,7 @@ class _UtilityState extends State<Utility> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Utility(),
+                          builder: (context) => WeatherWeb(),
                         ),
                       );
                     },
@@ -413,7 +414,7 @@ class _UtilityState extends State<Utility> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => SpeedtestWeb(),
                         ),
                       );
                     },
@@ -430,7 +431,7 @@ class _UtilityState extends State<Utility> {
                             height: 16,
                           ),
                           Text(
-                            "Internet SpeedTest",
+                            "SpeedTest",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 //color: Colors.white,

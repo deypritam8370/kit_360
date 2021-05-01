@@ -355,78 +355,6 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => NextScreen(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/social media/discord.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "Discord",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NextScreen(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/social media/twitch.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "Twitch",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
                           builder: (context) => BloggerWeb(),
                         ),
                       );
@@ -481,42 +409,6 @@ class _SocialMediaState extends State<SocialMedia> {
                           ),
                           Text(
                             "Github",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NextScreen(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/social media/messenger.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "Messenger",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 //color: Colors.white,
@@ -607,42 +499,6 @@ class _SocialMediaState extends State<SocialMedia> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => NextScreen(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/social media/snapchat.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "Snapchat",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
                           builder: (context) => YahooWeb(),
                         ),
                       );
@@ -688,7 +544,7 @@ class _SocialMediaState extends State<SocialMedia> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/social_media/tumblr.png',
+                            'assets/social media/tumblr.png',
                             width: 80,
                             height: 80,
                           ),
