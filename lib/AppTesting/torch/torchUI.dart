@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_flashlight/flutter_flashlight.dart';
+import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
 
 class TorchUI extends StatefulWidget {
   @override
@@ -14,7 +15,15 @@ class _TorchUIState extends State<TorchUI> {
       appBar: AppBar(
         title: Text('Flashlight'),
         centerTitle: true,
-        backgroundColor: Color(0xff0577C6),
+        //backgroundColor: Color(0xff0577C6),
+        actions: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(right: 20.0),
+            child: ChangeThemeButtonWidget(),
+          ),
+        ],
+        actionsIconTheme:
+            IconThemeData(size: 26.0, color: Colors.grey, opacity: 10.0),
       ),
       body: Center(
         child: Column(
