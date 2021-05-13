@@ -15,7 +15,6 @@ class _TorchUIState extends State<TorchUI> {
       appBar: AppBar(
         title: Text('Flashlight'),
         centerTitle: true,
-        //backgroundColor: Color(0xff0577C6),
         actions: <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 20.0),

@@ -39,6 +39,7 @@ class CategoryArea extends StatefulWidget {
 }
 
 class _CategoryAreaState extends State<CategoryArea> {
+
   List<CountryModel> countryModelList = <CountryModel>[
     CountryModel('Calendar', 'productivity/calender2', NextScreen()),
     CountryModel('Notes', 'productivity/notes', NextScreen()),
@@ -99,7 +100,7 @@ class _CategoryAreaState extends State<CategoryArea> {
   Widget build(BuildContext context) {
     return Expanded(
       child: GridView(
-        padding: EdgeInsets.only(left: 10, right: 10),
+        padding: EdgeInsets.all(10.0),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 15,

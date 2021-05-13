@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kit_360/AppTesting/qr code scanner/main_qrcodescanner.dart';
+import 'package:kit_360/AppTesting/barcode%20scanner/main_barcodescanner.dart';
 import 'package:kit_360/AppTesting/torch/torchUI.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
@@ -270,7 +272,7 @@ class _UtilityState extends State<Utility> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Utility(),
+                          builder: (context) => BarcodeScan(),
                         ),
                       );
                     },
@@ -287,10 +289,46 @@ class _UtilityState extends State<Utility> {
                             height: 16,
                           ),
                           Text(
-                            "Scanner",
+                            "Barcode Scan",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => QrCodeScan(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/utility/barcode-scanner.png',
+                            width: 80,
+                            height: 80,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "QR Code Scan",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
