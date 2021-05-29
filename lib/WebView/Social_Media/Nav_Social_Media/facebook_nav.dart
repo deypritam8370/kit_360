@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class NavigationControls extends StatelessWidget {
-
   const NavigationControls(this._webViewControllerFuture);
   final Future<WebViewController> _webViewControllerFuture;
 
