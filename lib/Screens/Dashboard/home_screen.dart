@@ -3,11 +3,32 @@ import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
 import 'package:kit_360/Screens/Dashboard/components/search_bar_area_dashboard.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 import 'package:kit_360/SearchBar/SearchScreen.dart';
+import 'package:kit_360/ThemeUI/theme_provider.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) => ChangeNotifierProvider(
+    create: (context) => ThemeProvider(),
+    builder: (context, _) {
+      final themeProvider = Provider.of<ThemeProvider>(context);
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: '360 KIT',
+        themeMode: themeProvider.themeMode,
+        theme: MyThemes.lightTheme,
+        darkTheme: MyThemes.darkTheme,
+        //home: SplashPage(duration: 3, goToPage: HomeScreen()),
+        home: HomeScreenExtended(),
+      );
+    },
+  );
+}
+
+class HomeScreenExtended extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

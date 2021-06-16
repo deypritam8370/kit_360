@@ -1,31 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:kit_360/Components/text_field_container.dart';
 import 'package:kit_360/constants.dart';
-import 'package:kit_360/ThemeUI/theme_provider.dart';
 
 class RoundedInputField extends StatelessWidget {
-  final String hintText;
-  final IconData icon;
-  final ValueChanged<String> onChanged;
-  const RoundedInputField({
-    Key key,
-    this.hintText,
-    this.icon = Icons.person,
-    this.onChanged,
-  }) : super(key: key);
+
+  final TextEditingController emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextField(
-        onChanged: onChanged,
+        controller: emailController,
         cursorColor: kPrimaryColor,
         decoration: InputDecoration(
           icon: Icon(
-            icon,
+            Icons.person,
             color: kPrimaryColor,
           ),
-          hintText: hintText,
+          hintText: "Enter Email Here",
           border: InputBorder.none,
         ),
       ),
