@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
 import 'package:kit_360/firebase_auth_service.dart';
 import 'package:provider/provider.dart';
@@ -85,7 +86,7 @@ class _MenuBarState extends State<MenuBar> {
           ListTile(
             title: Text('Exit'),
             leading: Icon(Icons.exit_to_app),
-            onTap: () => null,
+            onTap: () => SystemNavigator.pop(),
           ),
           ListTile(
             title: Text('LOG OUT'),

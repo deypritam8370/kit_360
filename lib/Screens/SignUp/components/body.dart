@@ -19,99 +19,116 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(
-          "SIGNUP",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
-        ),
-        SizedBox(height: size.height * 0.05),
-        // SvgPicture.asset(
-        //   "assets/icons/signup.svg",
-        //   height: size.height * 0.35,
-        // ),
-        SizedBox(height: size.height * 0.05),
-        TextFieldContainer(
-          child: TextField(
-            controller: emailController,
-            cursorColor: kPrimaryColor,
-            decoration: InputDecoration(
-              icon: Icon(
-                Icons.person,
-                color: kPrimaryColor,
+    return SafeArea(
+      child: Expanded(
+        child: SingleChildScrollView(
+          reverse: true,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(height: size.height * 0.1),
+              Text(
+                "SIGNUP",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
               ),
-              hintText: "Enter Email Here",
-              border: InputBorder.none,
-            ),
-          ),
-        ),
-        TextFieldContainer(
-          child: TextField(
-            obscureText: true,
-            controller: passwordController,
-            cursorColor: kPrimaryColor,
-            decoration: InputDecoration(
-              hintText: "Password",
-              icon: Icon(
-                Icons.lock,
-                color: kPrimaryColor,
+              SizedBox(height: size.height * 0.05),
+              // SvgPicture.asset(
+              //   "assets/icons/signup.svg",
+              //   height: size.height * 0.35,
+              // ),
+              Image(
+                  image: AssetImage("assets/images/kit360logo.png"),
+                  height: size.height * 0.20),
+              SizedBox(height: size.height * 0.05),
+              TextFieldContainer(
+                child: TextField(
+                  controller: emailController,
+                  cursorColor: kPrimaryColor,
+                  decoration: InputDecoration(
+                    icon: Icon(
+                      Icons.person,
+                      color: kPrimaryColor,
+                    ),
+                    hintText: "Enter Email Here",
+                    border: InputBorder.none,
+                  ),
+                ),
               ),
-              suffixIcon: Icon(
-                Icons.visibility,
-                color: kPrimaryColor,
+              TextFieldContainer(
+                child: TextField(
+                  obscureText: true,
+                  controller: passwordController,
+                  cursorColor: kPrimaryColor,
+                  decoration: InputDecoration(
+                    hintText: "Password",
+                    icon: Icon(
+                      Icons.lock,
+                      color: kPrimaryColor,
+                    ),
+                    suffixIcon: Icon(
+                      Icons.visibility,
+                      color: kPrimaryColor,
+                    ),
+                    border: InputBorder.none,
+                  ),
+                ),
               ),
-              border: InputBorder.none,
-            ),
-          ),
-        ),
-        TextButton(
-          style: ButtonStyle(
-            padding: MaterialStateProperty.all(
-              EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-            ),
-            backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-          ),
-          onPressed: () {
-            context.read<AuthenticationService>().signUp(
-              email: emailController.text.trim(),
-              password: passwordController.text.trim(),
-            );
-          },
-          child: Text(
-            'SIGN UP',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
-        SizedBox(height: size.height * 0.03),
-        AlreadyHaveAnAccountCheck(
-          login: false,
-          press: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return LoginScreen();
+              ClipRRect(
+                borderRadius: BorderRadius.circular(29),
+                child: TextButton(
+                  style: ButtonStyle(
+                    padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                    ),
+                    backgroundColor:
+                    MaterialStateProperty.all(Colors.blueAccent),
+                  ),
+                  onPressed: () {
+                    context.read<AuthenticationService>().signUp(
+                      email: emailController.text.trim(),
+                      password: passwordController.text.trim(),
+                    );
+                  },
+                  child: Text(
+                    'SIGN UP',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              SizedBox(height: size.height * 0.03),
+              AlreadyHaveAnAccountCheck(
+                login: false,
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return LoginScreen();
+                      },
+                    ),
+                  );
                 },
               ),
-            );
-          },
+              OrDivider(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SocialIcon(
+                      iconSrc : "assets/social media/youtube.png",
+                      press: () {
+                        context.read<AuthenticationService>().signInWithGoogle();
+                      }
+                  ),
+                  SocialIcon(
+                    iconSrc: "assets/social media/facebook.png",
+                    press: () {},
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
-        OrDivider(),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SocialIcon(
-              iconSrc: "assets/icons/google.svg",
-              press: () {},
-            ),
-            SocialIcon(
-              iconSrc: "assets/icons/google.svg",
-              press: () {},
-            ),
-          ],
-        )
-      ],
+      ),
     );
   }
 }

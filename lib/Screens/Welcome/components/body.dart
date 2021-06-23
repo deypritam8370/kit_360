@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
             //     height: size.height * 0.20
             // ),
             Image(
-                image: AssetImage("Assets/images/playstore.png"),
+                image: AssetImage("assets/images/kit360logo.png"),
                 height: size.height * 0.20),
             // SvgPicture.asset(
             //   "assets/icons/chat.svg",
@@ -74,48 +74,58 @@ class Body extends StatelessWidget {
             //     );
             //   },
             // ),
-            TextButton(
-              style: ButtonStyle(
-                padding: MaterialStateProperty.all(
-                  EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-                ),
-                backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
+            ClipRRect(
+              borderRadius: BorderRadius.circular(29),
+              child: TextButton(
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                   ),
-                );
-              },
-              child: Text(
-                'LOGIN',
-                style: TextStyle(color: Colors.white),
+                  backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return LoginScreen();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  'LOGIN',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
-            TextButton(
-              style: ButtonStyle(
-                padding: MaterialStateProperty.all(
-                  EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-                ),
-                backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return SignUpScreen();
-                    },
+            SizedBox(height: size.height * 0.05),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(29),
+              // margin: EdgeInsets.symmetric(vertical: 10),
+              // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              // width: size.width * 0.8,
+              child: TextButton(
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                   ),
-                );
-              },
-              child: Text(
-                'SIGN UP',
-                style: TextStyle(color: Colors.white),
+                  backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return SignUpScreen();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  'SIGN UP',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ],

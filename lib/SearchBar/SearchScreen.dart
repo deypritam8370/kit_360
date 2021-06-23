@@ -8,6 +8,7 @@ import 'package:kit_360/main.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 
 class SearchScreen extends StatefulWidget {
+
   final List<CountryModel> countryModelList;
   @override
   _SearchScreenState createState() => _SearchScreenState();
@@ -58,32 +59,30 @@ class _SearchScreenState extends State<SearchScreen> {
       suggestions: widget.countryModelList,
       cancellationWidget: Text("Close"),
       minimumChars: 1,
-//      placeHolder: Center(
-//        child: Padding(
-//          padding: const EdgeInsets.only(left: 10, right: 10),
-//          child: Text(searchMessage, textAlign: TextAlign.center, style: CustomTextStyle.textSubtitle1(context).copyWith(fontSize: 14),),
-//        ),
-//      ),
+      // placeHolder: Center(
+      //   child: Padding(
+      //     padding: const EdgeInsets.only(left: 10, right: 10),
+      //     child: Text(searchMessage, textAlign: TextAlign.center, style: CustomTextStyle.textSubtitle1(context).copyWith(fontSize: 14),),
+      //   ),
+      // ),
       emptyWidget: Center(
         child: Padding(
           padding: const EdgeInsets.only(left: 10, right: 10),
           child: Text("NO APPS FOUND"),
         ),
       ),
-      onError: (error) {
-        return Center(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 10, right: 10),
-            child: Text("$error", textAlign: TextAlign.center),
-          ),
-        );
-      },
+      // onError: (error) {
+      //   return Center(
+      //     child: Padding(
+      //       padding: const EdgeInsets.only(left: 10, right: 10),
+      //       child: Text("$error", textAlign: TextAlign.center),
+      //     ),
+      //   );
+      // },
       loader: Center(
         child: LoadingIndicator(),
       ),
       onSearch: getCountrySearchWithSuggestion,
-
-      /// CountrySearch  // if want to search with API then use thi ----> getCountryListFromApi
       onCancelled: () {
         Navigator.pop(context);
       },

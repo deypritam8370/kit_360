@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthenticationService {
   final FirebaseAuth _firebaseAuth;
@@ -15,11 +16,6 @@ class AuthenticationService {
       return e.message;
     }
   }
-
-  /// There are a lot of different ways on how you can do exception handling.
-  /// This is to make it as easy as possible but a better way would be to
-  /// use your own custom class that would take the exception and return better
-  /// error messages. That way you can throw, return or whatever you prefer with that instead.
 
   Future<String> signIn({String email, String password}) async {
     try {
@@ -40,6 +36,27 @@ class AuthenticationService {
       return e.message;
     }
   }
+
+  Future<void> signInWithGoogle() async {
+    final googleSignIn = GoogleSignIn();
+    final googleUser = await googleSignIn.signIn();
+    if (googleUser != null) {
+      final googleAuth = await googleUser.authentication;
+      if (googleAuth.idToken != null) {
+        final userCredential = await _firebaseAuth.signInWithCredential(
+          GoogleAuthProvider.credential(
+              idToken: googleAuth.idToken, accessToken: googleAuth.accessToken),
+        );
+        return userCredential.user;
+      }
+    } else {
+      throw FirebaseAuthException(
+        message: "Sign in aborded by user",
+        code: "ERROR_ABORDER_BY_USER",
+      );
+    }
+  }
+
 }
 
 //   User getUser() {

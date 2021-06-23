@@ -19,7 +19,7 @@ class SearchBarAreaDashboard extends StatelessWidget {
                     width: 10.0,
                   ),
                   Text(
-                    "Good Morning...",
+                    "Welcome",
                     style: TextStyle(fontSize: 30.0),
                   ),
                 ],
@@ -31,7 +31,6 @@ class SearchBarAreaDashboard extends StatelessWidget {
                   size: 30.0,
                 ),
                 onPressed: () {
-                  ///TODO - TRY TO ADD DRAWER HERE
                 },
               ),
             ],
@@ -39,20 +38,20 @@ class SearchBarAreaDashboard extends StatelessWidget {
           SizedBox(
             height: 16.0,
           ),
-          TextField(
-             decoration: InputDecoration(
-               hintText: "Search for Apps",
-               filled: true,
-               prefixIcon: Icon(Icons.search),
-               suffixIcon: Icon(Icons.keyboard_voice_rounded),
-               enabledBorder: OutlineInputBorder(
-                 borderRadius: BorderRadius.circular(24.0),
-                 borderSide: BorderSide(color: Colors.grey[300], width: 1),
-               ),
-               contentPadding:
-                   EdgeInsets.symmetric(horizontal: 18.0, vertical: 18.0),
-             ),
-           ),
+          // TextField(
+          //    decoration: InputDecoration(
+          //      hintText: "Search for Apps",
+          //      filled: true,
+          //      prefixIcon: Icon(Icons.search),
+          //      suffixIcon: Icon(Icons.keyboard_voice_rounded),
+          //      enabledBorder: OutlineInputBorder(
+          //        borderRadius: BorderRadius.circular(24.0),
+          //        borderSide: BorderSide(color: Colors.grey[300], width: 1),
+          //      ),
+          //      contentPadding:
+          //          EdgeInsets.symmetric(horizontal: 18.0, vertical: 18.0),
+          //    ),
+          //  ),
         ],
       ),
     );
