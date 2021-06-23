@@ -35,9 +35,12 @@ class Body extends StatelessWidget {
               //   "assets/icons/login.svg",
               //   height: size.height * 0.35,
               // ),
-              Image(
-                  image: AssetImage("assets/images/kit360logo.png"),
-                  height: size.height * 0.20),
+              ClipOval(
+                child: Image(
+                    image: AssetImage("assets/images/kit360logo.png"),
+                    height: size.height * 0.20,
+                ),
+              ),
               SizedBox(height: size.height * 0.05),
               TextFieldContainer(
                 child: TextField(
