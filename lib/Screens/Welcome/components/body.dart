@@ -20,116 +20,114 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     // This size provide us total height and width of our screen
     return SafeArea(
-      child: Expanded(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "Hi, there",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
-            ),
-            SizedBox(height: size.height * 0.05),
-            Text(
-              "WELCOME",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
-            ),
-            SizedBox(height: size.height * 0.05),
-            // Image.asset(
-            //     "Assets/images/playstore.png",
-            //     height: size.height * 0.20
-            // ),
-            Image(
-                image: AssetImage("assets/images/kit360logo.png"),
-                height: size.height * 0.20),
-            // SvgPicture.asset(
-            //   "assets/icons/chat.svg",
-            //   height: size.height * 0.45,
-            // ),
-            SizedBox(height: size.height * 0.05),
-            // RoundedButton(
-            //   text: "LOGIN",
-            //   press: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(
-            //         builder: (context) {
-            //           return LoginScreen();
-            //         },
-            //       ),
-            //     );
-            //   },
-            // ),
-            // RoundedButton(
-            //   text: "SIGN UP",
-            //   color: kPrimaryLightColor,
-            //   textColor: Colors.black,
-            //   press: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(
-            //         builder: (context) {
-            //           return SignUpScreen();
-            //         },
-            //       ),
-            //     );
-            //   },
-            // ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(29),
-              child: TextButton(
-                style: ButtonStyle(
-                  padding: MaterialStateProperty.all(
-                    EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            "Hi, there",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
+          ),
+          SizedBox(height: size.height * 0.05),
+          Text(
+            "WELCOME",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
+          ),
+          SizedBox(height: size.height * 0.05),
+          // Image.asset(
+          //     "Assets/images/playstore.png",
+          //     height: size.height * 0.20
+          // ),
+          Image(
+              image: AssetImage("assets/images/kit360logo.png"),
+              height: size.height * 0.20),
+          // SvgPicture.asset(
+          //   "assets/icons/chat.svg",
+          //   height: size.height * 0.45,
+          // ),
+          SizedBox(height: size.height * 0.05),
+          // RoundedButton(
+          //   text: "LOGIN",
+          //   press: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //         builder: (context) {
+          //           return LoginScreen();
+          //         },
+          //       ),
+          //     );
+          //   },
+          // ),
+          // RoundedButton(
+          //   text: "SIGN UP",
+          //   color: kPrimaryLightColor,
+          //   textColor: Colors.black,
+          //   press: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //         builder: (context) {
+          //           return SignUpScreen();
+          //         },
+          //       ),
+          //     );
+          //   },
+          // ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(29),
+            child: TextButton(
+              style: ButtonStyle(
+                padding: MaterialStateProperty.all(
+                  EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                ),
+                backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
                   ),
-                  backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return LoginScreen();
-                      },
-                    ),
-                  );
-                },
-                child: Text(
-                  'LOGIN',
-                  style: TextStyle(color: Colors.white),
-                ),
+                );
+              },
+              child: Text(
+                'LOGIN',
+                style: TextStyle(color: Colors.white),
               ),
             ),
-            SizedBox(height: size.height * 0.05),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(29),
-              // margin: EdgeInsets.symmetric(vertical: 10),
-              // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              // width: size.width * 0.8,
-              child: TextButton(
-                style: ButtonStyle(
-                  padding: MaterialStateProperty.all(
-                    EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+          ),
+          SizedBox(height: size.height * 0.05),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(29),
+            // margin: EdgeInsets.symmetric(vertical: 10),
+            // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            // width: size.width * 0.8,
+            child: TextButton(
+              style: ButtonStyle(
+                padding: MaterialStateProperty.all(
+                  EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                ),
+                backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
                   ),
-                  backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return SignUpScreen();
-                      },
-                    ),
-                  );
-                },
-                child: Text(
-                  'SIGN UP',
-                  style: TextStyle(color: Colors.white),
-                ),
+                );
+              },
+              child: Text(
+                'SIGN UP',
+                style: TextStyle(color: Colors.white),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

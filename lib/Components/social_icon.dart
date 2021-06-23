@@ -13,6 +13,7 @@ class SocialIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: press,
       child: Container(
@@ -27,8 +28,8 @@ class SocialIcon extends StatelessWidget {
         ),
         child: SvgPicture.asset(
           iconSrc,
-          height: 20,
-          width: 20,
+          height: size.height * 0.02,
+          width: size.height * 0.02,
         ),
       ),
     );
