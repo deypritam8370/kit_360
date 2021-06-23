@@ -21,15 +21,15 @@ class SocialIcon extends StatelessWidget {
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           border: Border.all(
-            width: 2,
+            width: 3,
             color: kPrimaryLightColor,
           ),
           shape: BoxShape.circle,
         ),
         child: SvgPicture.asset(
           iconSrc,
-          height: size.height * 0.02,
-          width: size.height * 0.02,
+          height: size.height * 0.03,
+          width: size.height * 0.03,
         ),
       ),
     );

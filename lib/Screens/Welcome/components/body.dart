@@ -37,9 +37,11 @@ class Body extends StatelessWidget {
           //     "Assets/images/playstore.png",
           //     height: size.height * 0.20
           // ),
-          Image(
-              image: AssetImage("assets/images/kit360logo.png"),
-              height: size.height * 0.20),
+          ClipOval(
+            child: Image(
+                image: AssetImage("assets/images/kit360logo.png"),
+                height: size.height * 0.20),
+          ),
           // SvgPicture.asset(
           //   "assets/icons/chat.svg",
           //   height: size.height * 0.45,

@@ -114,7 +114,7 @@ class Body extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SocialIcon(
-                    iconSrc: "assets/social media/youtube.png",
+                    iconSrc: "assets/images/icons8-google.svg",
                     press: () {
                       context
                           .read<AuthenticationService>()
