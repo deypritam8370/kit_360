@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:kit_360/AppTesting/meditation/main_meditation.dart';
+import 'package:kit_360/AppTesting/meditation/product_meditation.dart';
+import 'package:kit_360/AppTesting/step%20tracker/intro_screen.dart';
+import 'package:kit_360/AppTesting/step%20tracker/main_tracker.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
 import 'package:kit_360/SearchBar/CategorySearchScreen.dart';
@@ -215,7 +219,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                           Image.asset(
                             'assets/health and fitness/calories-calculator.png',
                             width: 80,
-                            height: 80,
+                            height: 70,
                           ),
                           SizedBox(
                             height: 16,
@@ -276,7 +280,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => MainMeditation(),
                         ),
                       );
                     },
@@ -312,7 +316,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => IntroductionScreen(),
                         ),
                       );
                     },

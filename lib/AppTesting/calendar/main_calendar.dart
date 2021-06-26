@@ -23,7 +23,7 @@ class HomePageState extends State<MyCalendar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Calendar'),
+        title: Text('Calendar'),
         actions: <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 20.0),
