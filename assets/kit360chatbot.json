@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "kit360-2021new",
+  "private_key_id": "429d494085d7c5a6a6a8878c9270b6772f42dc1c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCikUQsV135wzig\nM7Xc/UcBJgIf+4EW+lH+ZgbazugkDDMbbjPYjNBkocuFK62dqPLrwDYPUpI6v0ey\n5uHzMaOb0s7wDHLbPIbWaEoHXGHJaJNquo24T0YG7wQrqARfuVxDdTcF0g5Rvpam\n+koJqHuxqZY/5dck9qYmIR+dqHBg5y1DchaF1l+YbLsSaq898O05ht8AJWXOXA+z\nXiG2YJLYkFMIwwXJV2LgQPAuhu8HTCludATNhSgEIPSUPAeW8jKQfM1IhD7+R6BA\nhdtUosT6MPdW+PyYtgdJ178kh42AU9WH4oOgXW9xo6wwXoKGRVRbeQ7xfZeQ261H\nce0VCeizAgMBAAECggEAOE5OKXl9MCPAuiQO6mLDNA+hDsjCll3PBmj6GNEvMEUV\ncnvB81AaYbB0WESflorM0IC7eKUlxrk3sSwsuFnKDA+A4z28jlixbxOiCFij+emB\nnabNrTevznj8nc5M7Ya7ARZZH2f407FKZr0r5Zp4dTmCs9D8qm3PcEdqtuV/PuBl\nVonbr7tKjxT/kji3QI03B9Ojqc8AZG9oRatoV2zeAYdvOU7liXm5MOeF7lG8GES0\nVgeStHjGfMCFUoznhzDwYnWm+NJQmfrU/vZSpEXailYrwyuNRcopwAF70/M06gzZ\ntjVhxtDSKaLiq9Vr4BoBuu7xUfnRDzuHDmh0GgSsGQKBgQDc4ogS95WDT3KTGf+f\n0eHHoa1lpSFTaoARDMGoOmdRZHnsYZNQn9zIztuRsvVAQkMf1GFJWfDP4P89mokG\n8ilmX0IRUYF12o1iZdieymNgb8/iEpnbsd/OTaXiEvbuq9t832D4JWtja/BULS87\n61AtRP0d/+QAanZlVcBfggsa/QKBgQC8aVvxJ5EwzGTOGsSRkUtAjvdVLozn6X63\nqoF5jceA4GtWr7BKTGpR8vt7RBihhJhLpiRFxqjH0U87ZrXJjKfHxE5JFN8y4Qke\n1KaQecavo4hRdyFmHHKZAR7ibpu4M9+k/L2W2KXdNpn/pBZX5mAJVkmjaICwKgJe\nlHDpsviZbwKBgQCq7rMW2nndb/HeXFQxPZ5XeopRCoTLpLMOfqyunuOtXO/tOWVj\nExMsYsgP7ElWPPDtBNF0jiGI/TkIVzqLIYNgMX9TH5vrtAGNj/sehsh4rI5XCMX/\n+ZqUcApa9QoakOv9qm/EGFEOU01cFstitysInUaznH64w6pzqPSB9ITbkQKBgQCH\nhPT38XDSe8HqKYDH/4z0I6EtaO07Bkz6CK9WYi9kuIccdARGfM5goXhXgnSBAOGW\nUCt48NqH1zq5TDhnfz9TRhTVJikg7JJl1aj09FKAFQ1BI4Inc0DOYur3DX3+MXmk\nr5IixTQQeGyuXzUfBnp/XMxcuBcQHzdTFkxdHDkKCwKBgQDVJVlPPm/t2XymetUw\naB4xa4Ue+7+c6YzNSgQdCIFIyybe+SM6LhBZBjvEkA6ASWkfbYXuKMqmIgHVuP0r\nnfaZ+2/AbkAv0esT6S8HEDILFEVksBGDDOADd19lqAtJXT/j3me7mJfgAJDRzImu\nq5LwD1XccifTyg/nIiH3hoBbVw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "kit360chatbot@kit360-2021new.iam.gserviceaccount.com",
+  "client_id": "107009694245983311364",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kit360chatbot%40kit360-2021new.iam.gserviceaccount.com"
+}

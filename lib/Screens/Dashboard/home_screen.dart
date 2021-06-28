@@ -1,4 +1,6 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
 import 'package:kit_360/Screens/Dashboard/components/search_bar_area_dashboard.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
@@ -8,27 +10,88 @@ import 'package:page_transition/page_transition.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
 import 'package:provider/provider.dart';
+import 'package:kit_360/main.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
-    create: (context) => ThemeProvider(),
-    builder: (context, _) {
-      final themeProvider = Provider.of<ThemeProvider>(context);
-      return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: '360 KIT',
-        themeMode: themeProvider.themeMode,
-        theme: MyThemes.lightTheme,
-        darkTheme: MyThemes.darkTheme,
-        //home: SplashPage(duration: 3, goToPage: HomeScreen()),
-        home: HomeScreenExtended(),
+        create: (context) => ThemeProvider(),
+        builder: (context, _) {
+          final themeProvider = Provider.of<ThemeProvider>(context);
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: '360 KIT',
+            themeMode: themeProvider.themeMode,
+            theme: MyThemes.lightTheme,
+            darkTheme: MyThemes.darkTheme,
+            //home: SplashPage(duration: 3, goToPage: HomeScreen()),
+            home: HomeScreenExtended(),
+          );
+        },
       );
-    },
-  );
 }
 
-class HomeScreenExtended extends StatelessWidget {
+class HomeScreenExtended extends StatefulWidget {
+  @override
+  _HomeScreenExtendedState createState() => _HomeScreenExtendedState();
+}
+
+class _HomeScreenExtendedState extends State<HomeScreenExtended> {
+
+  @override
+  void initState() {
+
+    super.initState();
+
+    FirebaseMessaging.onMessage.listen(
+      (RemoteMessage message) {
+        RemoteNotification notification = message.notification;
+        AndroidNotification android = message.notification?.android;
+        if (notification != null && android != null) {
+          flutterLocalNotificationsPlugin.show(
+            notification.hashCode,
+            notification.title,
+            notification.body,
+            NotificationDetails(
+              android: AndroidNotificationDetails(
+                channel.id,
+                channel.name,
+                channel.description,
+                color: Colors.blue,
+                playSound: true,
+                icon: '@mipmap/kit360logo',
+              ),
+            ),
+          );
+        }
+      },
+    );
+
+    FirebaseMessaging.onMessageOpenedApp.listen(
+      (RemoteMessage message) {
+        print('A new onMessageOpenedApp event was published!');
+        RemoteNotification notification = message.notification;
+        AndroidNotification android = message.notification?.android;
+        if (notification != null && android != null) {
+          showDialog(
+            context: context,
+            builder: (_) {
+              return AlertDialog(
+                title: Text(notification.title),
+                content: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [Text(notification.body)],
+                  ),
+                ),
+              );
+            },
+          );
+        }
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
