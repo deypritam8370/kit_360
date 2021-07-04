@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kit_360/AppTesting/diet/MainDiet.dart';
 import 'package:kit_360/AppTesting/meditation/main_meditation.dart';
 import 'package:kit_360/AppTesting/meditation/product_meditation.dart';
 import 'package:kit_360/AppTesting/step%20tracker/intro_screen.dart';
@@ -208,7 +209,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => MainDiet(),
                         ),
                       );
                     },
