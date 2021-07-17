@@ -107,21 +107,21 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                       SizedBox(height: size.height * 0.05),
                     ],
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                      hintText: "Search for Apps",
-                      filled: true,
-                      prefixIcon: Icon(Icons.search),
-                      suffixIcon: Icon(Icons.filter_list),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(24.0),
-                        borderSide:
-                            BorderSide(color: Colors.grey[300], width: 1),
-                      ),
-                      contentPadding: EdgeInsets.symmetric(
-                          horizontal: 18.0, vertical: 18.0),
-                    ),
-                  )
+                  // TextField(
+                  //   decoration: InputDecoration(
+                  //     hintText: "Search for Apps",
+                  //     filled: true,
+                  //     prefixIcon: Icon(Icons.search),
+                  //     suffixIcon: Icon(Icons.filter_list),
+                  //     enabledBorder: OutlineInputBorder(
+                  //       borderRadius: BorderRadius.circular(24.0),
+                  //       borderSide:
+                  //           BorderSide(color: Colors.grey[300], width: 1),
+                  //     ),
+                  //     contentPadding: EdgeInsets.symmetric(
+                  //         horizontal: 18.0, vertical: 18.0),
+                  //   ),
+                  // )
                 ],
               ),
             ),

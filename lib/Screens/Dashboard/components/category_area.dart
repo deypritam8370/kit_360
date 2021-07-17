@@ -20,6 +20,48 @@ import 'package:kit_360/WebView/Social_Media/Web_Social_Media/reddit_web.dart';
 import 'package:kit_360/WebView/Social_Media/Web_Social_Media/twitter_web.dart';
 import 'package:kit_360/WebView/Social_Media/Web_Social_Media/yahoo_web.dart';
 import 'package:kit_360/WebView/Social_Media/Web_Social_Media/youtube_web.dart';
+import 'package:kit_360/WebView/education/EdXWeb.dart';
+import 'package:kit_360/WebView/education/GeeksForGeeksWeb.dart';
+import 'package:kit_360/WebView/education/KhanAcademyWeb.dart';
+import 'package:kit_360/WebView/education/UdacityWeb.dart';
+import 'package:kit_360/WebView/education/UdemyWeb.dart';
+import 'package:kit_360/WebView/education/UnacademyWeb.dart';
+import 'package:kit_360/WebView/education/WikipediaWeb.dart';
+import 'package:kit_360/WebView/entertainment/AirtelXstreamWeb.dart';
+import 'package:kit_360/WebView/entertainment/GaanaWeb.dart';
+import 'package:kit_360/WebView/entertainment/HotstarWeb.dart';
+import 'package:kit_360/WebView/entertainment/SonyLivWeb.dart';
+import 'package:kit_360/WebView/entertainment/SpotifyWeb.dart';
+import 'package:kit_360/WebView/entertainment/VootWeb.dart';
+import 'package:kit_360/WebView/entertainment/WynkMusicWeb.dart';
+import 'package:kit_360/WebView/entertainment/Zee5Web.dart';
+import 'package:kit_360/WebView/news/AajtakWeb.dart';
+import 'package:kit_360/WebView/news/AbpWeb.dart';
+import 'package:kit_360/WebView/news/BbcNews.dart';
+import 'package:kit_360/WebView/news/BloombergWeb.dart';
+import 'package:kit_360/WebView/news/DailyHuntWeb.dart';
+import 'package:kit_360/WebView/news/GoogleNewsWeb.dart';
+import 'package:kit_360/WebView/news/GuardianWeb.dart';
+import 'package:kit_360/WebView/news/IndiaTodayWeb.dart';
+import 'package:kit_360/WebView/news/InshortsWeb.dart';
+import 'package:kit_360/WebView/news/NdtvWeb.dart';
+import 'package:kit_360/WebView/news/ZeeNewsWeb.dart';
+import 'package:kit_360/WebView/shopping/BewakoofWeb.dart';
+import 'package:kit_360/WebView/shopping/BigBazaarWeb.dart';
+import 'package:kit_360/WebView/shopping/ClubFactoryWeb.dart';
+import 'package:kit_360/WebView/shopping/FlipkartWeb.dart';
+import 'package:kit_360/WebView/shopping/LenskartWeb.dart';
+import 'package:kit_360/WebView/shopping/LimeroadWeb.dart';
+import 'package:kit_360/WebView/shopping/MyntraWeb.dart';
+import 'package:kit_360/WebView/shopping/NykaaFashionWeb.dart';
+import 'package:kit_360/WebView/shopping/OlxWeb.dart';
+import 'package:kit_360/WebView/shopping/SheinWeb.dart';
+import 'package:kit_360/WebView/shopping/ShopCluesWeb.dart';
+import 'package:kit_360/WebView/shopping/SnapdealWeb.dart';
+import 'package:kit_360/WebView/shopping/TataCliqWeb.dart';
+import 'package:kit_360/WebView/shopping/Urbanicweb.dart';
+import 'package:kit_360/WebView/shopping/WishWeb.dart';
+import 'package:kit_360/WebView/shopping/amazonWeb.dart';
 
 class CountryModel {
   String countryName;
@@ -39,7 +81,6 @@ class CategoryArea extends StatefulWidget {
 }
 
 class _CategoryAreaState extends State<CategoryArea> {
-
   List<CountryModel> countryModelList = <CountryModel>[
     CountryModel('Calendar', 'productivity/calender2', NextScreen()),
     CountryModel('Notes', 'productivity/notes', NextScreen()),
@@ -86,7 +127,55 @@ class _CategoryAreaState extends State<CategoryArea> {
     CountryModel('Tumblr', 'social media/tumblr', TwitterWeb()),
     CountryModel('Twitter', 'social media/twitter', TwitterWeb()),
     CountryModel('Yahoo', 'social media/yahoo', YahooWeb()),
-    CountryModel('Youtube', 'social media/youtube', YoutubeWeb())
+    CountryModel('Youtube', 'social media/youtube', YoutubeWeb()),
+    CountryModel(
+        'Airtel Xstream', 'entertainment/Airtel Xstream', AirtelXstreamWeb()),
+    CountryModel('Gaana', 'entertainment/Gaana', GaanaWeb()),
+    CountryModel('Hotstar', 'entertainment/Hotstar', HotstarWeb()),
+    CountryModel('SonyLiv', 'entertainment/Sony Liv', SonyLivWeb()),
+    CountryModel('Spotify', 'entertainment/spotify', SpotifyWeb()),
+    CountryModel('Voot', 'entertainment/Voot', VootWeb()),
+    CountryModel('Wynk Music', 'entertainment/Wynk Music', WynkMusicWeb()),
+    CountryModel('Zee5', 'entertainment/Zee5', Zee5Web()),
+    CountryModel('Amazon', 'shopping and payments/amazon', AmazonWeb()),
+    CountryModel('Bewakoof', 'shopping and payments/bewakoof', BewakoofWeb()),
+    CountryModel(
+        'Big Bazaar', 'shopping and payments/big bazaar', BigBazaarWeb()),
+    CountryModel(
+        'Club Factory', 'shopping and payments/club factory', ClubFactoryWeb()),
+    CountryModel('Flipkart', 'shopping and payments/Flipkart', FlipkartWeb()),
+    CountryModel('Lenskart', 'shopping and payments/lenskart', LenskartWeb()),
+    CountryModel('Limeroad', 'shopping and payments/limeroad', LimeroadWeb()),
+    CountryModel('Myntra', 'shopping and payments/myntra', MyntraWeb()),
+    CountryModel('Nykaa Fashion', 'shopping and payments/nykaa fashion',
+        NykaaFashionWeb()),
+    CountryModel('OLX', 'shopping and payments/olx', OlxWeb()),
+    CountryModel('Shein', 'shopping and payments/shein', SheinWeb()),
+    CountryModel(
+        'Shopclues', 'shopping and payments/shopclues', ShopCluesWeb()),
+    CountryModel('Snapdeal', 'shopping and payments/snapdeal', SnapdealWeb()),
+    CountryModel('Tata Cliq', 'shopping and payments/tata cliq', TataCliqWeb()),
+    CountryModel('Urbanic', 'shopping and payments/urbanic', UrbanicWeb()),
+    CountryModel('Wish', 'shopping and payments/wish', WishWeb()),
+    CountryModel('EdX', 'education/EdX', EdXWeb()),
+    CountryModel(
+        'GeeksforGeeks', 'education/Geeks for Geeks', GeeksForGeeksWeb()),
+    CountryModel('Khan Academy', 'education/Khan Academy', KhanAcademyWeb()),
+    CountryModel('Udacity', 'education/Udacity', UdacityWeb()),
+    CountryModel('Udemy', 'education/Udemy', UdemyWeb()),
+    CountryModel('Unacademy', 'education/Unacademy', UnacademyWeb()),
+    CountryModel('Wikipedia', 'education/Wikipedia', WikipediaWeb()),
+    CountryModel('Aajtak', 'news/Aajtak', AajtakWeb()),
+    CountryModel('ABP News', 'news/ABP news', AbpWeb()),
+    CountryModel('BBC News', 'news/BBC News', BbcNewsWeb()),
+    CountryModel('Bloomberg', 'news/Bloomberg', BloombergWeb()),
+    CountryModel('Daily Hunt', 'news/Daily Hunt', DailyHuntWeb()),
+    CountryModel('Google News', 'news/Google News', GoogleNewsWeb()),
+    CountryModel('India Today', 'news/India Today', IndiaTodayWeb()),
+    CountryModel('Inshorts', 'news/Inshorts', InshortsWeb()),
+    CountryModel('NDTV news', 'news/NDTV', NdtvWeb()),
+    CountryModel('The Guardian', 'news/The Guardian', GuardianWeb()),
+    CountryModel('ZeeNews', 'news/Zee News', ZeeNewsWeb()),
   ];
 
   @override
