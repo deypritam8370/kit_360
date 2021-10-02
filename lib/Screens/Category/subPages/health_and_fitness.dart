@@ -5,7 +5,7 @@ import 'package:kit_360/AppTesting/meditation/product_meditation.dart';
 import 'package:kit_360/AppTesting/step%20tracker/intro_screen.dart';
 import 'package:kit_360/AppTesting/step%20tracker/main_tracker.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
-import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
+import 'package:kit_360/Screens/Menu/menu_bar.dart';
 import 'package:kit_360/SearchBar/CategorySearchScreen.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/SearchBar/SearchScreen.dart';
@@ -51,7 +51,7 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      drawer: MenuBar(),
+      drawer: Body(),
       appBar: AppBar(
         title: Text("360 KIT"),
         actions: <Widget>[
@@ -147,8 +147,8 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         children: <Widget>[
                           Image.asset(
                             'assets/health and fitness/blood-oxygen.png',
-                            width: 80,
-                            height: 80,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
@@ -183,8 +183,8 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         children: <Widget>[
                           Image.asset(
                             'assets/health and fitness/bmi-calculator.png',
-                            width: 80,
-                            height: 80,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
@@ -219,8 +219,8 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         children: <Widget>[
                           Image.asset(
                             'assets/health and fitness/calories-calculator.png',
-                            width: 80,
-                            height: 70,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
@@ -255,8 +255,8 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         children: <Widget>[
                           Image.asset(
                             'assets/health and fitness/heart-rate.png',
-                            width: 80,
-                            height: 80,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
@@ -291,8 +291,8 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         children: <Widget>[
                           Image.asset(
                             'assets/health and fitness/meditation.png',
-                            width: 80,
-                            height: 80,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
@@ -327,8 +327,8 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         children: <Widget>[
                           Image.asset(
                             'assets/health and fitness/step-tracker.png',
-                            width: 80,
-                            height: 80,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
@@ -363,8 +363,8 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         children: <Widget>[
                           Image.asset(
                             'assets/health and fitness/stress-notedown.png',
-                            width: 80,
-                            height: 80,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
@@ -399,8 +399,8 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         children: <Widget>[
                           Image.asset(
                             'assets/health and fitness/water-tracker.png',
-                            width: 80,
-                            height: 80,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
@@ -435,8 +435,8 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         children: <Widget>[
                           Image.asset(
                             'assets/health and fitness/women-health.png',
-                            width: 80,
-                            height: 80,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
@@ -471,8 +471,8 @@ class _HealthAndFitnessState extends State<HealthAndFitness> {
                         children: <Widget>[
                           Image.asset(
                             'assets/health and fitness/workout-tracker.png',
-                            width: 80,
-                            height: 80,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,

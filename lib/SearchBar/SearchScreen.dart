@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:kit_360/SearchBar/Components/search_bar_comp.dart';
 import 'package:flutter/services.dart';
-import 'package:kit_360/SearchBar/next_screen.dart';
-import 'package:kit_360/main.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 
 class SearchScreen extends StatefulWidget {

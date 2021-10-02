@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:kit_360/AppTesting/Speech%20To%20Text/homepage.dart';
 import 'package:kit_360/AppTesting/calendar/main_calendar.dart';
-import 'package:kit_360/AppTesting/notes/note_main.dart';
 import 'package:kit_360/AppTesting/notes/pages/home.dart';
-import 'package:kit_360/AppTesting/to%20do%20list/page/to_do_list_home.dart';
 import 'package:kit_360/AppTesting/to%20do%20list/todo_main.dart';
-import 'package:kit_360/AppTesting/voice%20recorder/main_voice.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
-import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
+import 'package:kit_360/Screens/Menu/menu_bar.dart';
 import 'package:kit_360/SearchBar/CategorySearchScreen.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/SearchBar/next_screen.dart';
 import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
 import 'package:kit_360/WebView/Social_Media/Web_Social_Media/facebook_web.dart';
+import 'package:kit_360/WebView/Utility/translate_web.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Productivity extends StatefulWidget {
@@ -42,9 +41,9 @@ class _ProductivityState extends State<Productivity> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      drawer: MenuBar(),
+      drawer: Body(),
       appBar: AppBar(
-        title: Text("360 KIT"),
+        title: Text("PRODUCTIVITY"),
         actions: <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 20.0),
@@ -128,7 +127,7 @@ class _ProductivityState extends State<Productivity> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MyCalendar(),
+                          builder: (context) => ToDoMain(),
                         ),
                       );
                     },
@@ -137,7 +136,7 @@ class _ProductivityState extends State<Productivity> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/productivity/calender2.png',
+                            'assets/productivity/to-do-list.png',
                             width: 80,
                             height: 80,
                           ),
@@ -145,10 +144,10 @@ class _ProductivityState extends State<Productivity> {
                             height: 16,
                           ),
                           Text(
-                            "Calender",
+                            "To Do List",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                //color: Colors.white,
+                              //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -173,114 +172,6 @@ class _ProductivityState extends State<Productivity> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/productivity/notes.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "Notes",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/productivity/reminder.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "Reminder",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ToDoMain(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/productivity/to-do-list.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "To Do List",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
                             'assets/productivity/sticky-notes.png',
                             width: 80,
                             height: 80,
@@ -292,7 +183,7 @@ class _ProductivityState extends State<Productivity> {
                             "Sticky Notes",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                //color: Colors.white,
+                              //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -308,7 +199,7 @@ class _ProductivityState extends State<Productivity> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MainVoice(),
+                          builder: (context) => SpeechToTextHome(),
                         ),
                       );
                     },
@@ -325,10 +216,10 @@ class _ProductivityState extends State<Productivity> {
                             height: 16,
                           ),
                           Text(
-                            "Voice Recorder",
+                            "Speech to Text",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                //color: Colors.white,
+                              //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -344,7 +235,7 @@ class _ProductivityState extends State<Productivity> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FacebookWeb(),
+                          builder: (context) => TranslateWeb(),
                         ),
                       );
                     },
@@ -353,18 +244,18 @@ class _ProductivityState extends State<Productivity> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/productivity/screen-recorder.png',
-                            width: 80,
-                            height: 80,
+                            'assets/utility/translator.png',
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
                           ),
                           Text(
-                            "Screen Recorder",
+                            "Translator",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                //color: Colors.white,
+                              //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -375,6 +266,186 @@ class _ProductivityState extends State<Productivity> {
                       ),
                     ),
                   ),
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => MyCalendar(),
+                  //       ),
+                  //     );
+                  //   },
+                  //   child: Container(
+                  //     child: Column(
+                  //       mainAxisAlignment: MainAxisAlignment.center,
+                  //       children: <Widget>[
+                  //         Image.asset(
+                  //           'assets/productivity/calender2.png',
+                  //           width: 80,
+                  //           height: 80,
+                  //         ),
+                  //         SizedBox(
+                  //           height: 16,
+                  //         ),
+                  //         Text(
+                  //           "Calender",
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //               //color: Colors.white,
+                  //               fontSize: 18,
+                  //               fontWeight: FontWeight.w600),
+                  //         ),
+                  //         SizedBox(
+                  //           height: 8,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => FacebookWeb(),
+                  //       ),
+                  //     );
+                  //   },
+                  //   child: Container(
+                  //     child: Column(
+                  //       mainAxisAlignment: MainAxisAlignment.center,
+                  //       children: <Widget>[
+                  //         Image.asset(
+                  //           'assets/productivity/reminder.png',
+                  //           width: 80,
+                  //           height: 80,
+                  //         ),
+                  //         SizedBox(
+                  //           height: 16,
+                  //         ),
+                  //         Text(
+                  //           "Reminder",
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //               //color: Colors.white,
+                  //               fontSize: 18,
+                  //               fontWeight: FontWeight.w600),
+                  //         ),
+                  //         SizedBox(
+                  //           height: 8,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => Home(),
+                  //       ),
+                  //     );
+                  //   },
+                  //   child: Container(
+                  //     child: Column(
+                  //       mainAxisAlignment: MainAxisAlignment.center,
+                  //       children: <Widget>[
+                  //         Image.asset(
+                  //           'assets/productivity/notes.png',
+                  //           width: 80,
+                  //           height: 80,
+                  //         ),
+                  //         SizedBox(
+                  //           height: 16,
+                  //         ),
+                  //         Text(
+                  //           "Notes",
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //             //color: Colors.white,
+                  //               fontSize: 18,
+                  //               fontWeight: FontWeight.w600),
+                  //         ),
+                  //         SizedBox(
+                  //           height: 8,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => VoiceRecorderHome(),
+                  //       ),
+                  //     );
+                  //   },
+                  //   child: Container(
+                  //     child: Column(
+                  //       mainAxisAlignment: MainAxisAlignment.center,
+                  //       children: <Widget>[
+                  //         Image.asset(
+                  //           'assets/productivity/voice-recorder.png',
+                  //           width: 80,
+                  //           height: 80,
+                  //         ),
+                  //         SizedBox(
+                  //           height: 16,
+                  //         ),
+                  //         Text(
+                  //           "Voice Recorder",
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //             //color: Colors.white,
+                  //               fontSize: 18,
+                  //               fontWeight: FontWeight.w600),
+                  //         ),
+                  //         SizedBox(
+                  //           height: 8,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => FacebookWeb(),
+                  //       ),
+                  //     );
+                  //   },
+                  //   child: Container(
+                  //     child: Column(
+                  //       mainAxisAlignment: MainAxisAlignment.center,
+                  //       children: <Widget>[
+                  //         Image.asset(
+                  //           'assets/productivity/screen-recorder.png',
+                  //           width: 80,
+                  //           height: 80,
+                  //         ),
+                  //         SizedBox(
+                  //           height: 16,
+                  //         ),
+                  //         Text(
+                  //           "Screen Recorder",
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //               //color: Colors.white,
+                  //               fontSize: 18,
+                  //               fontWeight: FontWeight.w600),
+                  //         ),
+                  //         SizedBox(
+                  //           height: 8,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ),

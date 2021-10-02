@@ -12,7 +12,7 @@ class TranslateWeb extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: new AppBar(
-          title: Text('GOOGLE TRANSLATE'),
+          title: Text('TRANSLATE'),
           actions: [NavigationControls(_controller.future)],
         ),
         body: Builder(

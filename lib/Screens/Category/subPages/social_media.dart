@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Category/subPages/utility.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
-import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
+import 'package:kit_360/Screens/Menu/menu_bar.dart';
 import 'package:kit_360/SearchBar/CategorySearchScreen.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/SearchBar/SearchScreen.dart';
@@ -53,7 +53,7 @@ class _SocialMediaState extends State<SocialMedia> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      drawer: MenuBar(),
+      drawer: Body(),
       appBar: AppBar(
         title: Text("360 KIT"),
         actions: <Widget>[

@@ -318,7 +318,7 @@ class _CategoryAreaState extends State<CategoryArea> {
                     "SOCIAL MEDIA",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        //color: Colors.white,
+                      //color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w600),
                   ),
@@ -360,6 +360,94 @@ class _CategoryAreaState extends State<CategoryArea> {
                   ),
                   Text(
                     "ENTERTAINMENT",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      //color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HealthAndFitness(),
+                ),
+              );
+            },
+            child: Container(
+              //margin: EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.grey[400],
+                  width: 2,
+                ),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset(
+                    'assets/health and fitness/health_and_fitness.png',
+                    width: 80,
+                    height: 80,
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Text(
+                    "HEALTH AND FITNESS",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        //color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Education(),
+                ),
+              );
+            },
+            child: Container(
+              //margin: EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.grey[400],
+                  width: 2,
+                ),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset(
+                    'assets/education/education.png',
+                    width: 80,
+                    height: 80,
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Text(
+                    "EDUCATION",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         //color: Colors.white,
@@ -422,50 +510,6 @@ class _CategoryAreaState extends State<CategoryArea> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HealthAndFitness(),
-                ),
-              );
-            },
-            child: Container(
-              //margin: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey[400],
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Image.asset(
-                    'assets/health and fitness/health_and_fitness.png',
-                    width: 80,
-                    height: 80,
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  Text(
-                    "HEALTH AND FITNESS",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        //color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  SizedBox(
-                    height: 8,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
                   builder: (context) => News(),
                 ),
               );
@@ -492,50 +536,6 @@ class _CategoryAreaState extends State<CategoryArea> {
                   ),
                   Text(
                     "NEWS",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        //color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  SizedBox(
-                    height: 8,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Education(),
-                ),
-              );
-            },
-            child: Container(
-              //margin: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey[400],
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Image.asset(
-                    'assets/education/education.png',
-                    width: 80,
-                    height: 80,
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  Text(
-                    "EDUCATION",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         //color: Colors.white,

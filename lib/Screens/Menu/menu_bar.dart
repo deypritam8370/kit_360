@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:kit_360/ThemeUI/change_theme_button_widget.dart';
 import 'package:kit_360/firebase_auth_service.dart';
 import 'package:provider/provider.dart';
 
-class MenuBar extends StatefulWidget {
+class MenuBar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Body(),
+    );
+  }
+}
+
+class Body extends StatefulWidget {
   @override
   _MenuBarState createState() => _MenuBarState();
 }
 
-class _MenuBarState extends State<MenuBar> {
+class _MenuBarState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -27,24 +35,7 @@ class _MenuBarState extends State<MenuBar> {
             currentAccountPicture: Image.asset(
               'assets/images/kit360logo.png',
             ),
-            // decoration: BoxDecoration(
-            //   //color: Colors.blue,
-            //   image: DecorationImage(
-            //       fit: BoxFit.fill,
-            //       image: NetworkImage(
-            //           'https://oflutter.com/wp-content/uploads/2021/02/profile-bg3.jpg')),
-            // ),
           ),
-          //Divider(thickness: 2),
-          // ListTile(
-          //   title: Text('THEME'),
-          //   trailing: Switch(
-          //     value: false,
-          //     onChanged: (changedTheme) {
-          //       ChangeThemeButtonWidget();
-          //     },
-          //   ),
-          // ),
           Divider(thickness: 2),
           ListTile(
             leading: Icon(Icons.favorite),

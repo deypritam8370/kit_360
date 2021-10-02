@@ -1,7 +1,8 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
+import 'package:kit_360/Screens/Category/subPages/utility.dart';
+import 'package:kit_360/Screens/Menu/menu_bar.dart';
 import 'package:kit_360/Screens/Dashboard/components/search_bar_area_dashboard.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
 import 'package:kit_360/SearchBar/SearchScreen.dart';
@@ -95,7 +96,7 @@ class _HomeScreenExtendedState extends State<HomeScreenExtended> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MenuBar(),
+      drawer: Body(),
       appBar: AppBar(
         title: Text("360 KIT"),
         actions: <Widget>[

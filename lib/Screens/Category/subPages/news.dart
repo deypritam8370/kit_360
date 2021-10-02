@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kit_360/Screens/Category/components/search_bar_area_sub_category.dart';
 import 'package:kit_360/Screens/Category/components/sub_category_area.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
-import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
+import 'package:kit_360/Screens/Menu/menu_bar.dart';
 import 'package:kit_360/SearchBar/CategorySearchScreen.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/SearchBar/SearchScreen.dart';
@@ -51,7 +51,7 @@ class _NewsState extends State<News> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      drawer: MenuBar(),
+      drawer: Body(),
       appBar: AppBar(
         title: Text("360 KIT"),
         actions: <Widget>[

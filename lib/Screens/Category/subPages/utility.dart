@@ -4,7 +4,7 @@ import 'package:kit_360/AppTesting/qr code scanner/main_qrcodescanner.dart';
 import 'package:kit_360/AppTesting/barcode%20scanner/main_barcodescanner.dart';
 import 'package:kit_360/AppTesting/torch/torchUI.dart';
 import 'package:kit_360/Screens/Dashboard/components/category_area.dart';
-import 'package:kit_360/Screens/Menu/components/menu_bar.dart';
+import 'package:kit_360/Screens/Menu/menu_bar.dart';
 import 'package:kit_360/SearchBar/CategorySearchScreen.dart';
 import 'package:kit_360/SearchBar/Constants.dart';
 import 'package:kit_360/SearchBar/next_screen.dart';
@@ -43,7 +43,7 @@ class _UtilityState extends State<Utility> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      drawer: MenuBar(),
+      drawer: Body(),
       appBar: AppBar(
         title: Text("360 KIT"),
         actions: <Widget>[
@@ -124,78 +124,42 @@ class _UtilityState extends State<Utility> {
                   childAspectRatio: 0.9,
                 ),
                 children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => MainClock(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/utility/clock.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "Clock",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Utility(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/utility/calculator.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "Calculator",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => Utility(),
+                  //       ),
+                  //     );
+                  //   },
+                  //   child: Container(
+                  //     child: Column(
+                  //       mainAxisAlignment: MainAxisAlignment.center,
+                  //       children: <Widget>[
+                  //         Image.asset(
+                  //           'assets/utility/calculator.png',
+                  //           width: size.width * 0.2,
+                  //           height: size.width * 0.2,
+                  //         ),
+                  //         SizedBox(
+                  //           height: 16,
+                  //         ),
+                  //         Text(
+                  //           "Calculator",
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //               //color: Colors.white,
+                  //               fontSize: 18,
+                  //               fontWeight: FontWeight.w600),
+                  //         ),
+                  //         SizedBox(
+                  //           height: 8,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -211,122 +175,14 @@ class _UtilityState extends State<Utility> {
                         children: <Widget>[
                           Image.asset(
                             'assets/utility/dictionary.png',
-                            width: 80,
-                            height: 80,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
                           ),
                           Text(
                             "Dictionary",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Utility(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/utility/compass.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "Compass",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => BarcodeScan(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/utility/barcode-scanner-2.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "Barcode Scan",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => QrCodeScan(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/utility/barcode-scanner.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "QR Code Scan",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 //color: Colors.white,
@@ -355,8 +211,8 @@ class _UtilityState extends State<Utility> {
                         children: <Widget>[
                           Image.asset(
                             'assets/utility/torch.png',
-                            width: 80,
-                            height: 80,
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
@@ -365,7 +221,79 @@ class _UtilityState extends State<Utility> {
                             "Torch",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                //color: Colors.white,
+                              //color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SpeedtestWeb(),
+              ),
+            );
+          },
+          child: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset(
+                  'assets/utility/internet-speedmeter.png',
+                  width: size.width * 0.2,
+                  height: size.width * 0.2,
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  "SpeedTest",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    //color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+              ],
+            ),
+          ),
+        ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => QrCodeScan(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/utility/barcode-scanner.png',
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "QR Code Scan",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              //color: Colors.white,
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -381,7 +309,7 @@ class _UtilityState extends State<Utility> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => TranslateWeb(),
+                          builder: (context) => BarcodeScan(),
                         ),
                       );
                     },
@@ -390,15 +318,15 @@ class _UtilityState extends State<Utility> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset(
-                            'assets/utility/translator.png',
-                            width: 80,
-                            height: 80,
+                            'assets/utility/barcode-scanner-2.png',
+                            width: size.width * 0.2,
+                            height: size.width * 0.2,
                           ),
                           SizedBox(
                             height: 16,
                           ),
                           Text(
-                            "Translator",
+                            "Barcode Scan",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 //color: Colors.white,
@@ -412,78 +340,114 @@ class _UtilityState extends State<Utility> {
                       ),
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => WeatherWeb(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/utility/weather.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "Weather",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SpeedtestWeb(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            'assets/utility/internet-speedmeter.png',
-                            width: 80,
-                            height: 80,
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Text(
-                            "SpeedTest",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                //color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => WeatherWeb(),
+                  //       ),
+                  //     );
+                  //   },
+                  //   child: Container(
+                  //     child: Column(
+                  //       mainAxisAlignment: MainAxisAlignment.center,
+                  //       children: <Widget>[
+                  //         Image.asset(
+                  //           'assets/utility/weather.png',
+                  //           width: size.width * 0.2,
+                  //           height: size.width * 0.2,
+                  //         ),
+                  //         SizedBox(
+                  //           height: 16,
+                  //         ),
+                  //         Text(
+                  //           "Weather",
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //               //color: Colors.white,
+                  //               fontSize: 18,
+                  //               fontWeight: FontWeight.w600),
+                  //         ),
+                  //         SizedBox(
+                  //           height: 8,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => MainClock(),
+                  //       ),
+                  //     );
+                  //   },
+                  //   child: Container(
+                  //     child: Column(
+                  //       mainAxisAlignment: MainAxisAlignment.center,
+                  //       children: <Widget>[
+                  //         Image.asset(
+                  //           'assets/utility/clock.png',
+                  //           width: size.width * 0.2,
+                  //           height: size.width * 0.2,
+                  //         ),
+                  //         SizedBox(
+                  //           height: 16,
+                  //         ),
+                  //         Text(
+                  //           "Clock",
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //             //color: Colors.white,
+                  //               fontSize: 18,
+                  //               fontWeight: FontWeight.w600),
+                  //         ),
+                  //         SizedBox(
+                  //           height: 8,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => Utility(),
+                  //       ),
+                  //     );
+                  //   },
+                  //   child: Container(
+                  //     child: Column(
+                  //       mainAxisAlignment: MainAxisAlignment.center,
+                  //       children: <Widget>[
+                  //         Image.asset(
+                  //           'assets/utility/compass.png',
+                  //           width: size.width * 0.2,
+                  //           height: size.width * 0.2,
+                  //         ),
+                  //         SizedBox(
+                  //           height: 16,
+                  //         ),
+                  //         Text(
+                  //           "Compass",
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //             //color: Colors.white,
+                  //               fontSize: 18,
+                  //               fontWeight: FontWeight.w600),
+                  //         ),
+                  //         SizedBox(
+                  //           height: 8,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ),
