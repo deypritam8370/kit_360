@@ -57,7 +57,7 @@ class _HomeScreenExtendedState extends State<HomeScreenExtended> {
               android: AndroidNotificationDetails(
                 channel.id,
                 channel.name,
-                channel.description,
+                //channel.description,
                 color: Colors.blue,
                 playSound: true,
                 icon: '@mipmap/kit360logo',

@@ -5,7 +5,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
     'high_importance_channel',
     "High Importance Notifications",
-    "This channel is used important notification",
+    //"This channel is used important notification",
     groupId: "Notification_group");
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationplugin =
@@ -39,7 +39,7 @@ class FirebaseNotifcation {
       if (notification != null && android != null) {
         AndroidNotificationDetails notificationDetails =
         AndroidNotificationDetails(
-            channel.id, channel.name, channel.description,
+            channel.id, channel.name, /*channel.description,*/
             importance: Importance.max,
             priority: Priority.high,
             groupKey: channel.groupId);
@@ -66,7 +66,7 @@ class FirebaseNotifcation {
             summaryText: "${activeNotifications.length - 1} messages");
         AndroidNotificationDetails groupNotificationDetails =
         AndroidNotificationDetails(
-            channel.id, channel.name, channel.description,
+            channel.id, channel.name, /*channel.description,*/
             styleInformation: inboxStyleInformation,
             setAsGroupSummary: true,
             groupKey: channel.groupId);

@@ -39,10 +39,10 @@ class _MyLineChartState extends State<MyLineChart> {
           bottomTitles: SideTitles(
               showTitles: true,
               reservedSize: 22,
-              getTextStyles: (value) => const TextStyle(
-                    fontSize: 16.0,
-                    color: Colors.orange,
-                  ),
+              // getTextStyles: (value) => const TextStyle(
+              //       fontSize: 16.0,
+              //       color: Colors.orange,
+              //     ),
               getTitles: (value) {
                 switch (value.toInt()) {
                   case 2:

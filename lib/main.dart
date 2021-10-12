@@ -37,7 +37,7 @@ import 'firebase_auth_service.dart';
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
     'High Importance Channel', // id
     'High Importance Notifications', // title
-    'This channel is used for important notifications', // description
+   //'This channel is used for important notifications', // description
     importance: Importance.high,
     playSound: true);
 
